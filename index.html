@@ -4,517 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abudhephzibah Global Enterprise</title>
-
-    <style>
-* {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f6f8f3;
-            color: #252525;
-            line-height: 1.6;
-        }
-
-        /* ... and many more CSS rules ... */
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f6f8f3;
-            color: #252525;
-            line-height: 1.6;
-        }
-
-        .top-bar {
-            background-color: #173b20;
-            color: white;
-            padding: 10px 8%;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 10px;
-            font-size: 14px;
-        }
-
-        .top-bar a {
-            color: #fff3a6;
-            text-decoration: none;
-        }
-
-        header {
-            background-color: white;
-            padding: 18px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            border-bottom: 1px solid #dedede;
-        }
-
-        .logo h1 {
-            color: #1d6b32;
-            font-size: 30px;
-        }
-
-        .logo p {
-            color: #777;
-            font-size: 14px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-        }
-
-        nav a {
-            color: #173b20;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #e17020;
-        }
-
-        .hero {
-            min-height: 400px;
-            padding: 90px 8%;
-            background: linear-gradient(rgba(20, 71, 34, 0.85), rgba(20, 71, 34, 0.85));
-            color: white;
-            text-align: center;
-        }
-
-        .hero h2 {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            max-width: 700px;
-            margin: auto;
-            font-size: 18px;
-        }
-
-        .hero a {
-            display: inline-block;
-            margin-top: 25px;
-            background-color: #f6b20a;
-            color: #1d331f;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 13px 25px;
-            border-radius: 6px;
-        }
-
-        .hero a:hover {
-            background-color: white;
-        }
-
-        main {
-            max-width: 1250px;
-            margin: auto;
-            padding: 60px 20px;
-        }
-
-        .welcome {
-            text-align: center;
-            margin-bottom: 55px;
-        }
-
-        .welcome h2 {
-            color: #1d6b32;
-            margin-bottom: 15px;
-            font-size: 32px;
-        }
-
-        .welcome p {
-            max-width: 850px;
-            margin: auto;
-            color: #555;
-        }
-
-        .section-heading {
-            color: #173b20;
-            font-size: 28px;
-            margin-bottom: 28px;
-            padding-bottom: 10px;
-            border-bottom: 4px solid #f6b20a;
-        }
-
-        .category-section {
-            margin-bottom: 65px;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 22px;
-        }
-
-        .product-card {
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            border: 1px solid #e0e0e0;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            transition: 0.3s;
-        }
-
-        .product-icon {
-            background-color: #e8f5e9;
-            padding: 22px;
-            font-size: 45px;
-            text-align: center;
-        }
-
-        .product-details {
-            padding: 20px;
-        }
-
-        .product-details h3 {
-            color: #1d6b32;
-            font-size: 20px;
-            margin-bottom: 12px;
-        }
-
-        .product-details p {
-            color: #666;
-            font-size: 14px;
-            min-height: 45px;
-            margin-bottom: 14px;
-        }
-
-        .price {
-            font-size: 20px;
-            color: #dc5b10;
-            font-weight: bold;
-        }
-
-        .unit {
-            color: #777;
-            font-size: 13px;
-        }
-
-        .stock {
-            display: inline-block;
-            margin-top: 12px;
-            background-color: #d9f2dd;
-            color: #19712b;
-            padding: 5px 9px;
-            border-radius: 15px;
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        .low-stock {
-            background-color: #fff2cc;
-            color: #9b6500;
-        }
-
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-top: 25px;
-        }
-
-        .service-box {
-            background-color: #173b20;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            border-radius: 10px;
-        }
-
-        .service-box h3 {
-            margin: 12px 0;
-            color: #f6d76d;
-        }
-
-        .service-box p {
-            font-size: 14px;
-        }
-
-        .price-table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: white;
-            margin-top: 20px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
-        }
-
-        .price-table th,
-        .price-table td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #e6e6e6;
-        }
-
-        .price-table th {
-            background-color: #1d6b32;
-            color: white;
-        }
-
-        .price-table tr:hover {
-            background-color: #f1faef;
-        }
-
-        .about-section {
-            background-color: #edf7ed;
-            padding: 45px 8%;
-            margin-top: 20px;
-        }
-
-        .about-content {
-            max-width: 1100px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 35px;
-            align-items: center;
-        }
-
-        .about-text h2 {
-            color: #1d6b32;
-            font-size: 30px;
-            margin-bottom: 15px;
-        }
-
-        .about-text p {
-            margin-bottom: 15px;
-            color: #444;
-        }
-
-        .about-list {
-            list-style-type: none;
-        }
-
-        .about-list li {
-            padding: 8px 0;
-        }
-
-        .about-list li::before {
-            content: "✓ ";
-            color: #1d6b32;
-            font-weight: bold;
-        }
-
-        .about-box {
-            background-color: white;
-            padding: 35px;
-            border-radius: 10px;
-            border-left: 7px solid #f6b20a;
-        }
-
-        .about-box h3 {
-            color: #173b20;
-            margin-bottom: 14px;
-        }
-
-        .contact-section {
-            max-width: 1100px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-
-        .contact-card,
-        .contact-form {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        .contact-card h2,
-        .contact-form h2 {
-            color: #1d6b32;
-            margin-bottom: 18px;
-        }
-
-        .contact-card p {
-            margin: 13px 0;
-            color: #555;
-        }
-
-        form label {
-            display: block;
-            font-weight: bold;
-            margin-top: 12px;
-            margin-bottom: 5px;
-        }
-
-        form input,
-        form textarea,
-        form select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #cfcfcf;
-            border-radius: 5px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        form textarea {
-            height: 110px;
-            resize: vertical;
-        }
-
-        form button {
-            margin-top: 18px;
-            border: none;
-            background-color: #1d6b32;
-            color: white;
-            padding: 12px 23px;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        form button:hover {
-            background-color: #e17020;
-        }
-
-        footer {
-            background-color: #102b17;
-            color: white;
-            padding: 45px 8% 18px;
-        }
-
-        .footer-grid {
-            max-width: 1200px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-        }
-
-        footer h3 {
-            color: #f6d76d;
-            margin-bottom: 15px;
-        }
-
-        footer ul {
-            list-style: none;
-        }
-
-        footer li {
-            margin: 8px 0;
-        }
-
-        footer a {
-            color: #eeeeee;
-            text-decoration: none;
-        }
-
-        .copyright {
-            max-width: 1200px;
-            margin: 30px auto 0;
-            padding-top: 18px;
-            border-top: 1px solid #426749;
-            text-align: center;
-            color: #c7d5ca;
-            font-size: 14px;
-        }
-
-        @media (max-width: 700px) {
-            header {
-                justify-content: center;
-                text-align: center;
-            }
-
-            nav ul {
-                justify-content: center;
-            }
-
-            .hero {
-                padding: 70px 20px;
-            }
-
-            .hero h2 {
-                font-size: 35px;
-            }
-
-            .about-content,
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .top-bar {
-                justify-content: center;
-                text-align: center;
-            }
-        }
-    </style>
 </head>
 
-<body>
+<body style="margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh;">
 
     <!-- Top Contact Bar -->
-    <div class="top-bar">
-        <p>📍 158, Airport Road, Before First Bank, Benin City, Edo State, Nigeria.</p>
-        <p>📞 Call us: +234 815 1871 036 | ✉ Email: abudhephzibah@gmail.com</p>
+    <div style="background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%); color: white; padding: 15px 8%; display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 10px; font-size: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+        <p style="margin: 0; font-weight: bold;">📞 Call us: +234 815 1871 036 | ✉ Email: abudhephzibah@email.com</p>
     </div>
 
     <!-- Website Header -->
-    <header>
-        <div class="logo">
-            <h1>🛒 Abudhephzibah Global Enterprise</h1>
-            <p>Quality provisions at affordable prices</p>
+    <header style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px 8%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; box-shadow: 0 6px 20px rgba(0,0,0,0.3);">
+        <div class="logo" style="text-align: left;">
+            <h1 style="color: white; font-size: 32px; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">🛒 Abudhephzibah Global Enterprise</h1>
+            <p style="color: #f0f0f0; font-size: 15px; margin: 5px 0 0 0;">Quality provisions at affordable prices</p>
         </div>
 
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#foods">Food Items</a></li>
-                <li><a href="#cleaning">Cleaning</a></li>
-                <li><a href="#others">Other Provisions</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <nav style="text-align: right;">
+            <ul style="list-style-type: none; display: flex; flex-wrap: wrap; gap: 20px; margin: 0; padding: 0;">
+                <li><a href="#home" style="color: #ffd700; text-decoration: none; font-weight: bold; font-size: 16px; padding: 8px 15px; border-radius: 20px; transition: 0.3s;">Home</a></li>
+                <li><a href="#foods" style="color: #ffd700; text-decoration: none; font-weight: bold; font-size: 16px; padding: 8px 15px; border-radius: 20px; transition: 0.3s;">Food Items</a></li>
+                <li><a href="#cleaning" style="color: #ffd700; text-decoration: none; font-weight: bold; font-size: 16px; padding: 8px 15px; border-radius: 20px; transition: 0.3s;">Cleaning</a></li>
+                <li><a href="#others" style="color: #ffd700; text-decoration: none; font-weight: bold; font-size: 16px; padding: 8px 15px; border-radius: 20px; transition: 0.3s;">Other Provisions</a></li>
+                <li><a href="#contact" style="color: #ffd700; text-decoration: none; font-weight: bold; font-size: 16px; padding: 8px 15px; border-radius: 20px; transition: 0.3s;">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <h2>Everything Your Home Needs</h2>
-        <p>
+    <section class="hero" id="home" style="min-height: 450px; padding: 100px 8%; background: linear-gradient(135deg, #f093fb 0%, #f5576c 50%, #f5576c 100%); color: white; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; box-shadow: inset 0 0 50px rgba(0,0,0,0.2);">
+        <h2 style="font-size: 52px; margin: 0 0 20px 0; text-shadow: 3px 3px 6px rgba(0,0,0,0.4); font-weight: bold;">Everything Your Home Needs</h2>
+        <p style="max-width: 750px; margin: 0 auto 30px auto; font-size: 20px; line-height: 1.8; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">
             Shop for rice, beans, detergents, cooking ingredients, beverages,
             personal-care products, and many other provisions in one place.
         </p>
-        <a href="#foods">View Our Products</a>
+        <a href="#foods" style="display: inline-block; margin-top: 20px; background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%); color: #764ba2; text-decoration: none; font-weight: bold; padding: 16px 35px; border-radius: 50px; font-size: 18px; box-shadow: 0 6px 20px rgba(0,0,0,0.3); transition: 0.3s;">View Our Products 🛍️</a>
     </section>
 
-    <main>
+    <main style="max-width: 1300px; margin: auto; padding: 70px 20px;">
 
         <!-- Welcome Text -->
-        <section class="welcome">
-            <h2>Welcome to Abudhephzibah Global Enterprise</h2>
-            <p>
+        <section class="welcome" style="text-align: center; margin-bottom: 60px; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2);">
+            <h2 style="color: #764ba2; margin: 0 0 20px 0; font-size: 36px; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">Welcome to Abudhephzibah Global Enterprise</h2>
+            <p style="max-width: 900px; margin: 0 auto; color: #555; font-size: 17px; line-height: 1.8;">
                 We sell useful daily provisions for homes, students, families,
                 restaurants, and small businesses. Browse our available items below.
                 Prices shown are examples and can be changed to your shop prices.
@@ -522,88 +54,68 @@
         </section>
 
         <!-- Rice and Grains -->
-        <section class="category-section" id="foods">
-            <h2 class="section-heading">🍚 Rice, Beans and Grains</h2>
+        <section class="category-section" id="foods" style="margin-bottom: 70px;">
+            <h2 class="section-heading" style="color: white; font-size: 32px; margin: 0 0 35px 0; padding: 20px; background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); border-radius: 15px; text-align: center; box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);">🍚 Rice, Beans and Grains</h2>
 
-            <div class="product-grid">
+            <div class="product-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px;">
 
-                <article class="product-card">
-                    <div class="product-icon">🍚</div>
-                    <div class="product-details">
-                        <h3>Local Rice</h3>
-                        <p>Clean Nigerian local rice for everyday meals and parties.</p>
-                        <p class="price">₦1,500 <span class="unit">per kg</span></p>
-                        <span class="stock">Available</span>
+                <article class="product-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%); border-radius: 20px; overflow: hidden; border: 2px solid #e0e7ff; box-shadow: 0 8px 25px rgba(0,0,0,0.12); transition: 0.3s;">
+                    <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 30px; font-size: 55px; text-align: center;">🍚</div>
+                    <div style="padding: 25px;">
+                        <h3 style="color: #764ba2; font-size: 22px; margin: 0 0 15px 0; font-weight: bold;">Local Rice</h3>
+                        <p style="color: #666; font-size: 15px; min-height: 50px; margin: 0 0 18px 0; line-height: 1.6;">Clean Nigerian local rice for everyday meals and parties.</p>
+                        <p style="font-size: 24px; color: #f5576c; font-weight: bold; margin: 0;">₦1,500 <span style="color: #999; font-size: 14px;">per kg</span></p>
+                        <span style="display: inline-block; margin-top: 15px; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 8px 16px; border-radius: 25px; font-size: 13px; font-weight: bold; box-shadow: 0 4px 10px rgba(17, 153, 142, 0.3);">✓ Available</span>
                     </div>
                 </article>
 
-                <article class="product-card">
-                    <div class="product-icon">🍚</div>
-                    <div class="product-details">
-                        <h3>Foreign Rice</h3>
-                        <p>Long-grain parboiled rice available in different bag sizes.</p>
-                        <p class="price">₦2,000 <span class="unit">per kg</span></p>
-                        <span class="stock">Available</span>
+                <article class="product-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%); border-radius: 20px; overflow: hidden; border: 2px solid #e0e7ff; box-shadow: 0 8px 25px rgba(0,0,0,0.12); transition: 0.3s;">
+                    <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 30px; font-size: 55px; text-align: center;">🍚</div>
+                    <div style="padding: 25px;">
+                        <h3 style="color: #764ba2; font-size: 22px; margin: 0 0 15px 0; font-weight: bold;">Foreign Rice</h3>
+                        <p style="color: #666; font-size: 15px; min-height: 50px; margin: 0 0 18px 0; line-height: 1.6;">Long-grain parboiled rice available in different bag sizes.</p>
+                        <p style="font-size: 24px; color: #f5576c; font-weight: bold; margin: 0;">₦2,000 <span style="color: #999; font-size: 14px;">per kg</span></p>
+                        <span style="display: inline-block; margin-top: 15px; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 8px 16px; border-radius: 25px; font-size: 13px; font-weight: bold; box-shadow: 0 4px 10px rgba(17, 153, 142, 0.3);">✓ Available</span>
                     </div>
                 </article>
 
-                <article class="product-card">
-                    <div class="product-icon">🫘</div>
-                    <div class="product-details">
-                        <h3>Honey Beans</h3>
-                        <p>Good-quality honey beans for beans porridge, akara, and moi-moi.</p>
-                        <p class="price">₦1,800 <span class="unit">per kg</span></p>
-                        <span class="stock">Available</span>
+                <article class="product-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%); border-radius: 20px; overflow: hidden; border: 2px solid #e0e7ff; box-shadow: 0 8px 25px rgba(0,0,0,0.12); transition: 0.3s;">
+                    <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 30px; font-size: 55px; text-align: center;">🫘</div>
+                    <div style="padding: 25px;">
+                        <h3 style="color: #764ba2; font-size: 22px; margin: 0 0 15px 0; font-weight: bold;">Honey Beans</h3>
+                        <p style="color: #666; font-size: 15px; min-height: 50px; margin: 0 0 18px 0; line-height: 1.6;">Good-quality honey beans for beans porridge, akara, and moi-moi.</p>
+                        <p style="font-size: 24px; color: #f5576c; font-weight: bold; margin: 0;">₦1,800 <span style="color: #999; font-size: 14px;">per kg</span></p>
+                        <span style="display: inline-block; margin-top: 15px; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 8px 16px; border-radius: 25px; font-size: 13px; font-weight: bold; box-shadow: 0 4px 10px rgba(17, 153, 142, 0.3);">✓ Available</span>
                     </div>
                 </article>
 
-                <article class="product-card">
-                    <div class="product-icon">🫘</div>
-                    <div class="product-details">
-                        <h3>White Beans</h3>
-                        <p>Dry white beans, carefully selected and properly packaged.</p>
-                        <p class="price">₦1,600 <span class="unit">per kg</span></p>
-                        <span class="stock">Available</span>
+                <article class="product-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%); border-radius: 20px; overflow: hidden; border: 2px solid #e0e7ff; box-shadow: 0 8px 25px rgba(0,0,0,0.12); transition: 0.3s;">
+                    <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 30px; font-size: 55px; text-align: center;">🫘</div>
+                    <div style="padding: 25px;">
+                        <h3 style="color: #764ba2; font-size: 22px; margin: 0 0 15px 0; font-weight: bold;">White Beans</h3>
+                        <p style="color: #666; font-size: 15px; min-height: 50px; margin: 0 0 18px 0; line-height: 1.6;">Dry white beans, carefully selected and properly packaged.</p>
+                        <p style="font-size: 24px; color: #f5576c; font-weight: bold; margin: 0;">₦1,600 <span style="color: #999; font-size: 14px;">per kg</span></p>
+                        <span style="display: inline-block; margin-top: 15px; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 8px 16px; border-radius: 25px; font-size: 13px; font-weight: bold; box-shadow: 0 4px 10px rgba(17, 153, 142, 0.3);">✓ Available</span>
                     </div>
                 </article>
 
-                <article class="product-card">
-                    <div class="product-icon">🌾</div>
-                    <div class="product-details">
-                        <h3>Garri</h3>
-                        <p>Yellow and white garri for drinking, eba, and other meals.</p>
-                        <p class="price">₦900 <span class="unit">per kg</span></p>
-                        <span class="stock">Available</span>
+                <article class="product-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%); border-radius: 20px; overflow: hidden; border: 2px solid #e0e7ff; box-shadow: 0 8px 25px rgba(0,0,0,0.12); transition: 0.3s;">
+                    <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 30px; font-size: 55px; text-align: center;">🌾</div>
+                    <div style="padding: 25px;">
+                        <h3 style="color: #764ba2; font-size: 22px; margin: 0 0 15px 0; font-weight: bold;">Garri</h3>
+                        <p style="color: #666; font-size: 15px; min-height: 50px; margin: 0 0 18px 0; line-height: 1.6;">Yellow and white garri for drinking, eba, and other meals.</p>
+                        <p style="font-size: 24px; color: #f5576c; font-weight: bold; margin: 0;">₦900 <span style="color: #999; font-size: 14px;">per kg</span></p>
+                        <span style="display: inline-block; margin-top: 15px; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 8px 16px; border-radius: 25px; font-size: 13px; font-weight: bold; box-shadow: 0 4px 10px rgba(17, 153, 142, 0.3);">✓ Available</span>
                     </div>
                 </article>
 
-                <article class="product-card">
-                    <div class="product-icon">🌽</div>
-                    <div class="product-details">
-                        <h3>Maize / Corn</h3>
-                        <p>Dried maize suitable for pap, corn flour, and animal feed.</p>
-                        <p class="price">₦700 <span class="unit">per kg</span></p>
-                        <span class="stock low-stock">Few Left</span>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-icon">🌾</div>
-                    <div class="product-details">
-                        <h3>Semolina</h3>
-                        <p>Fine semolina meal for smooth swallow food.</p>
-                        <p class="price">₦1,100 <span class="unit">per pack</span></p>
-                        <span class="stock">Available</span>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-icon">🥣</div>
-                    <div class="product-details">
-                        <h3>Wheat Meal</h3>
-                        <p>Healthy wheat meal for family meals and swallow.</p>
-                        <p class="price">₦1,200 <span class="unit">per pack</span></p>
-                        <span class="stock">Available</span>
+                <article class="product-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%); border-radius: 20px; overflow: hidden; border: 2px solid #e0e7ff; box-shadow: 0 8px 25px rgba(0,0,0,0.12); transition: 0.3s;">
+                    <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 30px; font-size: 55px; text-align: center;">🌽</div>
+                    <div style="padding: 25px;">
+                        <h3 style="color: #764ba2; font-size: 22px; margin: 0 0 15px 0; font-weight: bold;">Maize / Corn</h3>
+                        <p style="color: #666; font-size: 15px; min-height: 50px; margin: 0 0 18px 0; line-height: 1.6;">Dried maize suitable for pap, corn flour, and animal feed.</p>
+                        <p style="font-size: 24px; color: #f5576c; font-weight: bold; margin: 0;">₦700 <span style="color: #999; font-size: 14px;">per kg</span></p>
+                        <span style="display: inline-block; margin-top: 15px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 8px 16px; border-radius: 25px; font-size: 13px; font-weight: bold; box-shadow: 0 4px 10px rgba(240, 147, 251, 0.3);">⚠ Few Left</span>
                     </div>
                 </article>
 
@@ -611,88 +123,48 @@
         </section>
 
         <!-- Cleaning Products -->
-        <section class="category-section" id="cleaning">
-            <h2 class="section-heading">🧼 Detergents and Cleaning Products</h2>
+        <section class="category-section" id="cleaning" style="margin-bottom: 70px;">
+            <h2 class="section-heading" style="color: white; font-size: 32px; margin: 0 0 35px 0; padding: 20px; background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%); border-radius: 15px; text-align: center; box-shadow: 0 6px 20px rgba(240, 147, 251, 0.4);">🧼 Detergents and Cleaning Products</h2>
 
-            <div class="product-grid">
+            <div class="product-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px;">
 
-                <article class="product-card">
-                    <div class="product-icon">🧼</div>
-                    <div class="product-details">
-                        <h3>Omo Detergent</h3>
-                        <p>Detergent powder for washing clothes and removing stains.</p>
-                        <p class="price">₦2,500 <span class="unit">per pack</span></p>
-                        <span class="stock">Available</span>
+                <article class="product-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%); border-radius: 20px; overflow: hidden; border: 2px solid #ffe0e9; box-shadow: 0 8px 25px rgba(0,0,0,0.12); transition: 0.3s;">
+                    <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 30px; font-size: 55px; text-align: center;">🧼</div>
+                    <div style="padding: 25px;">
+                        <h3 style="color: #764ba2; font-size: 22px; margin: 0 0 15px 0; font-weight: bold;">Omo Detergent</h3>
+                        <p style="color: #666; font-size: 15px; min-height: 50px; margin: 0 0 18px 0; line-height: 1.6;">Detergent powder for washing clothes and removing stains.</p>
+                        <p style="font-size: 24px; color: #f5576c; font-weight: bold; margin: 0;">₦2,500 <span style="color: #999; font-size: 14px;">per pack</span></p>
+                        <span style="display: inline-block; margin-top: 15px; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 8px 16px; border-radius: 25px; font-size: 13px; font-weight: bold; box-shadow: 0 4px 10px rgba(17, 153, 142, 0.3);">✓ Available</span>
                     </div>
                 </article>
 
-                <article class="product-card">
-                    <div class="product-icon">🧺</div>
-                    <div class="product-details">
-                        <h3>Ariel Detergent</h3>
-                        <p>Strong washing powder for white and coloured clothes.</p>
-                        <p class="price">₦3,000 <span class="unit">per pack</span></p>
-                        <span class="stock">Available</span>
+                <article class="product-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%); border-radius: 20px; overflow: hidden; border: 2px solid #ffe0e9; box-shadow: 0 8px 25px rgba(0,0,0,0.12); transition: 0.3s;">
+                    <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 30px; font-size: 55px; text-align: center;">🧺</div>
+                    <div style="padding: 25px;">
+                        <h3 style="color: #764ba2; font-size: 22px; margin: 0 0 15px 0; font-weight: bold;">Ariel Detergent</h3>
+                        <p style="color: #666; font-size: 15px; min-height: 50px; margin: 0 0 18px 0; line-height: 1.6;">Strong washing powder for white and coloured clothes.</p>
+                        <p style="font-size: 24px; color: #f5576c; font-weight: bold; margin: 0;">₦3,000 <span style="color: #999; font-size: 14px;">per pack</span></p>
+                        <span style="display: inline-block; margin-top: 15px; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 8px 16px; border-radius: 25px; font-size: 13px; font-weight: bold; box-shadow: 0 4px 10px rgba(17, 153, 142, 0.3);">✓ Available</span>
                     </div>
                 </article>
 
-                <article class="product-card">
-                    <div class="product-icon">✨</div>
-                    <div class="product-details">
-                        <h3>Sunlight Detergent</h3>
-                        <p>Affordable detergent for hand washing and laundry.</p>
-                        <p class="price">₦1,800 <span class="unit">per pack</span></p>
-                        <span class="stock">Available</span>
+                <article class="product-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%); border-radius: 20px; overflow: hidden; border: 2px solid #ffe0e9; box-shadow: 0 8px 25px rgba(0,0,0,0.12); transition: 0.3s;">
+                    <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 30px; font-size: 55px; text-align: center;">✨</div>
+                    <div style="padding: 25px;">
+                        <h3 style="color: #764ba2; font-size: 22px; margin: 0 0 15px 0; font-weight: bold;">Sunlight Detergent</h3>
+                        <p style="color: #666; font-size: 15px; min-height: 50px; margin: 0 0 18px 0; line-height: 1.6;">Affordable detergent for hand washing and laundry.</p>
+                        <p style="font-size: 24px; color: #f5576c; font-weight: bold; margin: 0;">₦1,800 <span style="color: #999; font-size: 14px;">per pack</span></p>
+                        <span style="display: inline-block; margin-top: 15px; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 8px 16px; border-radius: 25px; font-size: 13px; font-weight: bold; box-shadow: 0 4px 10px rgba(17, 153, 142, 0.3);">✓ Available</span>
                     </div>
                 </article>
 
-                <article class="product-card">
-                    <div class="product-icon">🍋</div>
-                    <div class="product-details">
-                        <h3>Dishwashing Liquid</h3>
-                        <p>Liquid soap for washing plates, cups, pots, and utensils.</p>
-                        <p class="price">₦800 <span class="unit">per bottle</span></p>
-                        <span class="stock">Available</span>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-icon">🚽</div>
-                    <div class="product-details">
-                        <h3>Toilet Cleaner</h3>
-                        <p>Cleaning liquid for fresh and hygienic toilets.</p>
-                        <p class="price">₦700 <span class="unit">per bottle</span></p>
-                        <span class="stock">Available</span>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-icon">🧽</div>
-                    <div class="product-details">
-                        <h3>Floor Cleaner</h3>
-                        <p>Floor-cleaning liquid with a fresh fragrance.</p>
-                        <p class="price">₦1,000 <span class="unit">per bottle</span></p>
-                        <span class="stock low-stock">Few Left</span>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-icon">🫧</div>
-                    <div class="product-details">
-                        <h3>Washing Bar Soap</h3>
-                        <p>Bar soap used for washing clothes and household items.</p>
-                        <p class="price">₦350 <span class="unit">per bar</span></p>
-                        <span class="stock">Available</span>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-icon">🧻</div>
-                    <div class="product-details">
-                        <h3>Tissue Paper</h3>
-                        <p>Soft tissue paper for home, office, and personal use.</p>
-                        <p class="price">₦500 <span class="unit">per roll</span></p>
-                        <span class="stock">Available</span>
+                <article class="product-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%); border-radius: 20px; overflow: hidden; border: 2px solid #ffe0e9; box-shadow: 0 8px 25px rgba(0,0,0,0.12); transition: 0.3s;">
+                    <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 30px; font-size: 55px; text-align: center;">🍋</div>
+                    <div style="padding: 25px;">
+                        <h3 style="color: #764ba2; font-size: 22px; margin: 0 0 15px 0; font-weight: bold;">Dishwashing Liquid</h3>
+                        <p style="color: #666; font-size: 15px; min-height: 50px; margin: 0 0 18px 0; line-height: 1.6;">Liquid soap for washing plates, cups, pots, and utensils.</p>
+                        <p style="font-size: 24px; color: #f5576c; font-weight: bold; margin: 0;">₦800 <span style="color: #999; font-size: 14px;">per bottle</span></p>
+                        <span style="display: inline-block; margin-top: 15px; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 8px 16px; border-radius: 25px; font-size: 13px; font-weight: bold; box-shadow: 0 4px 10px rgba(17, 153, 142, 0.3);">✓ Available</span>
                     </div>
                 </article>
 
@@ -700,337 +172,137 @@
         </section>
 
         <!-- Other Provisions -->
-        <section class="category-section" id="others">
-            <h2 class="section-heading">🥫 Other Important Provisions</h2>
+        <section class="category-section" id="others" style="margin-bottom: 70px;">
+            <h2 class="section-heading" style="color: white; font-size: 32px; margin: 0 0 35px 0; padding: 20px; background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%); border-radius: 15px; text-align: center; box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);">🥫 Other Important Provisions</h2>
 
-            <div class="product-grid">
+            <div class="product-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px;">
 
-                <article class="product-card">
-                    <div class="product-icon">🫗</div>
-                    <div class="product-details">
-                        <h3>Vegetable Oil</h3>
-                        <p>Cooking oil for frying, baking, and preparing meals.</p>
-                        <p class="price">₦2,500 <span class="unit">per litre</span></p>
-                        <span class="stock">Available</span>
+                <article class="product-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%); border-radius: 20px; overflow: hidden; border: 2px solid #d4f0ff; box-shadow: 0 8px 25px rgba(0,0,0,0.12); transition: 0.3s;">
+                    <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 30px; font-size: 55px; text-align: center;">🫗</div>
+                    <div style="padding: 25px;">
+                        <h3 style="color: #764ba2; font-size: 22px; margin: 0 0 15px 0; font-weight: bold;">Vegetable Oil</h3>
+                        <p style="color: #666; font-size: 15px; min-height: 50px; margin: 0 0 18px 0; line-height: 1.6;">Cooking oil for frying, baking, and preparingmeals.</p>
+                        <p style="font-size: 24px; color: #f5576c; font-weight: bold; margin: 0;">₦2,500 <span style="color: #999; font-size: 14px;">per litre</span></p>
+                        <span style="display: inline-block; margin-top: 15px; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 8px 16px; border-radius: 25px; font-size: 13px; font-weight: bold; box-shadow: 0 4px 10px rgba(17, 153, 142, 0.3);">✓ Available</span>
                     </div>
                 </article>
 
-                <article class="product-card">
-                    <div class="product-icon">🟠</div>
-                    <div class="product-details">
-                        <h3>Palm Oil</h3>
-                        <p>Fresh red palm oil for soups, stew, and local dishes.</p>
-                        <p class="price">₦2,100 <span class="unit">per litre</span></p><span class="stock">Available</span>
+                <article class="product-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%); border-radius: 20px; overflow: hidden; border: 2px solid #d4f0ff; box-shadow: 0 8px 25px rgba(0,0,0,0.12); transition: 0.3s;">
+                    <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 30px; font-size: 55px; text-align: center;">🟠</div>
+                    <div style="padding: 25px;">
+                        <h3 style="color: #764ba2; font-size: 22px; margin: 0 0 15px 0; font-weight: bold;">Palm Oil</h3>
+                        <p style="color: #666; font-size: 15px; min-height: 50px; margin: 0 0 18px 0; line-height: 1.6;">Fresh red palm oil for soups, stew, and local dishes.</p>
+                        <p style="font-size: 24px; color: #f5576c; font-weight: bold; margin: 0;">₦2,100 <span style="color: #999; font-size: 14px;">per litre</span></p>
+                        <span style="display: inline-block; margin-top: 15px; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 8px 16px; border-radius: 25px; font-size: 13px; font-weight: bold; box-shadow: 0 4px 10px rgba(17, 153, 142, 0.3);">✓ Available</span>
                     </div>
                 </article>
 
-                <article class="product-card">
-                    <div class="product-icon">🥫</div>
-                    <div class="product-details">
-                        <h3>Tomato Paste</h3>
-                        <p>Tomato paste for stew, sauce, jollof rice, and soup.</p>
-                        <p class="price">₦600 <span class="unit">per tin</span></p>
-                        <span class="stock">Available</span>
+                <article class="product-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%); border-radius: 20px; overflow: hidden; border: 2px solid #d4f0ff; box-shadow: 0 8px 25px rgba(0,0,0,0.12); transition: 0.3s;">
+                    <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 30px; font-size: 55px; text-align: center;">🥫</div>
+                    <div style="padding: 25px;">
+                        <h3 style="color: #764ba2; font-size: 22px; margin: 0 0 15px 0; font-weight: bold;">Tomato Paste</h3>
+                        <p style="color: #666; font-size: 15px; min-height: 50px; margin: 0 0 18px 0; line-height: 1.6;">Tomato paste for stew, sauce, jollof rice, and soup.</p>
+                        <p style="font-size: 24px; color: #f5576c; font-weight: bold; margin: 0;">₦600 <span style="color: #999; font-size: 14px;">per tin</span></p>
+                        <span style="display: inline-block; margin-top: 15px; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 8px 16px; border-radius: 25px; font-size: 13px; font-weight: bold; box-shadow: 0 4px 10px rgba(17, 153, 142, 0.3);">✓ Available</span>
                     </div>
                 </article>
 
-                <article class="product-card">
-                    <div class="product-icon">🧂</div>
-                    <div class="product-details">
-                        <h3>Salt</h3>
-                        <p>Fine cooking salt for your everyday kitchen needs.</p>
-                        <p class="price">₦400 <span class="unit">per pack</span></p>
-                        <span class="stock">Available</span>
+                <article class="product-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%); border-radius: 20px; overflow: hidden; border: 2px solid #d4f0ff; box-shadow: 0 8px 25px rgba(0,0,0,0.12); transition: 0.3s;">
+                    <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 30px; font-size: 55px; text-align: center;">🍝</div>
+                    <div style="padding: 25px;">
+                        <h3 style="color: #764ba2; font-size: 22px; margin: 0 0 15px 0; font-weight: bold;">Spaghetti</h3>
+                        <p style="color: #666; font-size: 15px; min-height: 50px; margin: 0 0 18px 0; line-height: 1.6;">Long pasta for quick meals, sauce, and jollof spaghetti.</p>
+                        <p style="font-size: 24px; color: #f5576c; font-weight: bold; margin: 0;">₦700 <span style="color: #999; font-size: 14px;">per pack</span></p>
+                        <span style="display: inline-block; margin-top: 15px; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 8px 16px; border-radius: 25px; font-size: 13px; font-weight: bold; box-shadow: 0 4px 10px rgba(17, 153, 142, 0.3);">✓ Available</span>
                     </div>
                 </article>
 
-                <article class="product-card">
-                    <div class="product-icon">🍬</div>
-                    <div class="product-details">
-                        <h3>Sugar</h3>
-                        <p>Granulated white sugar for drinks, baking, and cooking.</p>
-                        <p class="price">₦1,000 <span class="unit">per kg</span></p>
-                        <span class="stock">Available</span>
+                <article class="product-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%); border-radius: 20px; overflow: hidden; border: 2px solid #d4f0ff; box-shadow: 0 8px 25px rgba(0,0,0,0.12); transition: 0.3s;">
+                    <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 30px; font-size: 55px; text-align: center;">🍪</div>
+                    <div style="padding: 25px;">
+                        <h3 style="color: #764ba2; font-size: 22px; margin: 0 0 15px 0; font-weight: bold;">Biscuits</h3>
+                        <p style="color: #666; font-size: 15px; min-height: 50px; margin: 0 0 18px 0; line-height: 1.6;">Sweet and cream biscuits for children and adults.</p>
+                        <p style="font-size: 24px; color: #f5576c; font-weight: bold; margin: 0;">₦300 <span style="color: #999; font-size: 14px;">per pack</span></p>
+                        <span style="display: inline-block; margin-top: 15px; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 8px 16px; border-radius: 25px; font-size: 13px; font-weight: bold; box-shadow: 0 4px 10px rgba(17, 153, 142, 0.3);">✓ Available</span>
                     </div>
                 </article>
 
-                <article class="product-card">
-                    <div class="product-icon">🧊</div>
-                    <div class="product-details">
-                        <h3>Seasoning Cubes</h3>
-                        <p>Seasoning cubes and spices for tasty meals.</p>
-                        <p class="price">₦500 <span class="unit">per pack</span></p>
-                        <span class="stock">Available</span>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-icon">🍝</div>
-                    <div class="product-details">
-                        <h3>Spaghetti</h3>
-                        <p>Long pasta for quick meals, sauce, and jollof spaghetti.</p>
-                        <p class="price">₦700 <span class="unit">per pack</span></p>
-                        <span class="stock">Available</span>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-icon">🐟</div>
-                    <div class="product-details">
-                        <h3>Sardines</h3>
-                        <p>Canned sardines for breakfast, snacks, and meals.</p>
-                        <p class="price">₦800 <span class="unit">per tin</span></p>
-                        <span class="stock">Available</span>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-icon">🍪</div>
-                    <div class="product-details">
-                        <h3>Biscuits</h3>
-                        <p>Sweet and cream biscuits for children and adults.</p><p class="price">₦300 <span class="unit">per pack</span></p>
-                        <span class="stock">Available</span>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-icon">🥤</div>
-                    <div class="product-details">
-                        <h3>Soft Drinks</h3>
-                        <p>Cold beverages and soft drinks in different flavours.</p>
-                        <p class="price">₦300 <span class="unit">per bottle</span></p>
-                        <span class="stock">Available</span>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-icon">🪥</div>
-                    <div class="product-details">
-                        <h3>Toothpaste</h3>
-                        <p>Toothpaste for daily dental care and fresh breath.</p>
-                        <p class="price">₦500 <span class="unit">per tube</span></p>
-                        <span class="stock">Available</span>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-icon">🧴</div>
-                    <div class="product-details"><h3>Salt</h3>
-                        <p>Fine cooking salt for your everyday kitchen needs.</p>
-                        <p class="price">₦400 <span class="unit">per pack</span></p>
-                        <span class="stock">Available</span>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-icon">🍬</div>
-                    <div class="product-details">
-                        <h3>Sugar</h3>
-                        <p>Granulated white sugar for drinks, baking, and cooking.</p>
-                        <p class="price">₦1,000 <span class="unit">per kg</span></p>
-                        <span class="stock">Available</span>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-icon">🧊</div>
-                    <div class="product-details">
-                        <h3>Seasoning Cubes</h3>
-                        <p>Seasoning cubes and spices for tasty meals.</p>
-                        <p class="price">₦500 <span class="unit">per pack</span></p>
-                        <span class="stock">Available</span>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-icon">🍝</div>
-                    <div class="product-details">
-                        <h3>Spaghetti</h3>
-                        <p>Long pasta for quick meals, sauce, and jollof spaghetti.</p>
-                        <p class="price">₦700 <span class="unit">per pack</span></p>
-                        <span class="stock">Available</span>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-icon">🐟</div>
-                    <div class="product-details">
-                        <h3>Sardines</h3>
-                        <p>Canned sardines for breakfast, snacks, and meals.</p>
-                        <p class="price">₦800 <span class="unit">per tin</span></p>
-                        <span class="stock">Available</span>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-icon">🍪</div>
-                    <div class="product-details">
-                        <h3>Biscuits</h3>
-                        <p>Sweet and cream biscuits for children and adults.</p>
-                        <p class="price">₦300 <span class="unit">per pack</span></p>
-                        <span class="stock">Available</span>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-icon">🥤</div>
-                    <div class="product-details">
-                        <h3>Soft Drinks</h3>
-                        <p>Cold beverages and soft drinks in different flavours.</p>
-                        <p class="price">₦300 <span class="unit">per bottle</span></p>
-                        <span class="stock">Available</span>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-icon">🪥</div>
-                    <div class="product-details">
-                        <h3>Toothpaste</h3>
-                        <p>Toothpaste for daily dental care and fresh breath.</p>
-                        <p class="price">₦500 <span class="unit">per tube</span></p>
-                        <span class="stock">Available</span>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-icon">🧴</div>
-                    <div class="product-details">
-                        <h3>Body Cream</h3>
-                        <p>Body lotion and cream for healthy and moisturised skin.</p>
-                        <p class="price">₦1,200 <span class="unit">per bottle</span></p>
-                        <span class="stock low-stock">Few Left</span>
+                <article class="product-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%); border-radius: 20px; overflow: hidden; border: 2px solid #d4f0ff; box-shadow: 0 8px 25px rgba(0,0,0,0.12); transition: 0.3s;">
+                    <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 30px; font-size: 55px; text-align: center;">🥤</div>
+                    <div style="padding: 25px;">
+                        <h3 style="color: #764ba2; font-size: 22px; margin: 0 0 15px 0; font-weight: bold;">Soft Drinks</h3>
+                        <p style="color: #666; font-size: 15px; min-height: 50px; margin: 0 0 18px 0; line-height: 1.6;">Cold beverages and soft drinks in different flavours.</p>
+                        <p style="font-size: 24px; color: #f5576c; font-weight: bold; margin: 0;">₦300 <span style="color: #999; font-size: 14px;">per bottle</span></p>
+                        <span style="display: inline-block; margin-top: 15px; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 8px 16px; border-radius: 25px; font-size: 13px; font-weight: bold; box-shadow: 0 4px 10px rgba(17, 153, 142, 0.3);">✓ Available</span>
                     </div>
                 </article>
 
             </div>
-        </section><!-- Price List -->
-        <section class="category-section">
-            <h2 class="section-heading">📋 Popular Items Price List</h2>
-
-            <table class="price-table">
-                <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Category</th>
-                        <th>Unit</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>Local Rice</td>
-                        <td>Rice and Grains</td>
-                        <td>1 kg</td>
-                        <td>₦1,500</td>
-                    </tr>
-                    <tr>
-                        <td>Honey Beans</td>
-                        <td>Beans and Legumes</td>
-                        <td>1 kg</td>
-                        <td>₦1,800</td>
-                    </tr>
-                    <tr>
-                        <td>Garri</td>
-                        <td>Food Items</td>
-                        <td>1 kg</td>
-                        <td>₦900</td>
-                    </tr>
-                    <tr>
-                        <td>Omo Detergent</td>
-                        <td>Cleaning Products</td>
-                        <td>1 pack</td>
-                        <td>₦2,500</td>
-                    </tr>
-                    <tr>
-                        <td>Vegetable Oil</td>
-                        <td>Cooking Ingredients</td>
-                        <td>1 litre</td>
-                        <td>₦2,500</td>
-                    </tr>
-                    <tr>
-                        <td>Tomato Paste</td>
-                        <td>Canned Foods</td>
-                        <td>1 tin</td>
-                        <td>₦600</td>
-                    </tr>
-                    <tr>
-                        <td>Spaghetti</td>
-                        <td>Packaged Foods</td>
-                        <td>1 pack</td>
-                        <td>₦700</td>
-                    </tr>
-                    <tr>
-                        <td>Bathing Soap</td>
-                        <td>Personal Care</td>
-                        <td>1 bar</td>
-                        <td>₦450</td>
-                    </tr>
-                </tbody>
-            </table>
         </section>
 
         <!-- Services -->
-        <section class="category-section">
-            <h2 class="section-heading">⭐ Why Shop With Us?</h2>
+        <section class="category-section" style="margin-bottom: 70px;">
+            <h2 class="section-heading" style="color: white; font-size: 32px; margin: 0 0 35px 0; padding: 20px; background: linear-gradient(90deg, #a8edea 0%, #fed6e3 100%); border-radius: 15px; text-align: center; box-shadow: 0 6px 20px rgba(168, 237, 234, 0.4);">⭐ Why Shop With Us?</h2>
 
-            <div class="service-grid">
-                <div class="service-box">
-                    <p>🛍️</p>
-                    <h3>Many Products</h3>
-                    <p>Find food items, cleaning products, toiletries, and more in one shop.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px;">
+
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; padding: 35px 25px; border-radius: 20px; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);">
+                    <p style="font-size: 50px; margin: 0;">🛍️</p>
+                    <h3 style="margin: 15px 0; color: #ffd700; font-size: 24px;">Many Products</h3>
+                    <p style="font-size: 15px; line-height: 1.6;">Find food items, cleaning products, toiletries, and more in one shop.</p>
                 </div>
 
-                <div class="service-box">
-                    <p>💰</p>
-                    <h3>Affordable Prices</h3>
-                    <p>We try our best to offer good products at fair prices.</p>
+                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; text-align: center; padding: 35px 25px; border-radius: 20px; box-shadow: 0 10px 30px rgba(240, 147, 251, 0.4);">
+                    <p style="font-size: 50px; margin: 0;">💰</p>
+                    <h3 style="margin: 15px 0; color: #ffd700; font-size: 24px;">Affordable Prices</h3>
+                    <p style="font-size: 15px; line-height: 1.6;">We try our best to offer good products at fair prices.</p>
                 </div>
 
-                <div class="service-box">
-                    <p>✅</p>
-                    <h3>Quality Items</h3>
-                    <p>We stock carefully selected products for our customers.</p>
+                <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; text-align: center; padding: 35px 25px; border-radius: 20px; box-shadow: 0 10px 30px rgba(79, 172, 254, 0.4);">
+                    <p style="font-size: 50px; margin: 0;">✅</p>
+                    <h3 style="margin: 15px 0; color: #ffd700; font-size: 24px;">Quality Items</h3>
+                    <p style="font-size: 15px; line-height: 1.6;">We stock carefully selected products for our customers.</p>
                 </div>
 
-                <div class="service-box">
-                    <p>😊</p>
-                    <h3>Friendly Service</h3>
-                    <p>We welcome every customer with respect and helpful service.</p>
+                <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; text-align: center; padding: 35px 25px; border-radius: 20px; box-shadow: 0 10px 30px rgba(250, 112, 154, 0.4);">
+                    <p style="font-size: 50px; margin: 0;">😊</p>
+                    <h3 style="margin: 15px 0; color: #ffd700; font-size: 24px;">Friendly Service</h3>
+                    <p style="font-size: 15px; line-height: 1.6;">We welcome every customer with respect and helpful service.</p>
                 </div>
+
             </div>
         </section>
 
-    </main>
-
-    <!-- About Section -->
-    <section class="about-section">
-        <div class="about-content">
+    </main>  <!-- About Section -->
+    <section class="about-section" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 70px 8%; box-shadow: inset 0 0 50px rgba(0,0,0,0.1);">
+        <div style="max-width: 1150px; margin: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 45px; align-items: center;">
             <div class="about-text">
-                <h2>About Abudhephzibah Global Enterprise</h2>
-                <p>
+                <h2 style="color: #764ba2; font-size: 34px; margin: 0 0 20px 0; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">About Abudhephzibah Global Enterprise</h2>
+                <p style="margin: 0 0 18px 0; color: #333; font-size: 17px; line-height: 1.8;">
                     Abudhephzibah Global Enterprise is your neighbourhood shop for daily
                     household needs. We serve students, families, workers, and small businesses.
                 </p>
-                <p>
+                <p style="margin: 0 0 25px 0; color: #333; font-size: 17px; line-height: 1.8;">
                     Our goal is to make essential provisions easy to find at prices
-                    that customers can afford.</p>
+                    that customers can afford.
+                </p>
 
-                <ul class="about-list">
-                    <li>Rice, beans, garri, noodles, and other food items</li>
-                    <li>Detergents, dish soap, floor cleaner, and tissue paper</li>
-                    <li>Cooking oil, spices, tomato paste, sugar, and salt</li>
-                    <li>Toiletries, drinks, snacks, and packaged foods</li>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li style="padding: 10px 0; color: #555; font-size: 16px;">✓ Rice, beans, garri, noodles, and other food items</li>
+                    <li style="padding: 10px 0; color: #555; font-size: 16px;">✓ Detergents, dish soap, floor cleaner, and tissue paper</li>
+                    <li style="padding: 10px 0; color: #555; font-size: 16px;">✓ Cooking oil, spices, tomato paste, sugar, and salt</li>
+                    <li style="padding: 10px 0; color: #555; font-size: 16px;">✓ Toiletries, drinks, snacks, and packaged foods</li>
                 </ul>
             </div>
 
-            <div class="about-box">
-                <h3>Opening Hours</h3>
-                <p><strong>Monday - Friday:</strong> 8:00 AM - 7:00 PM</p>
-                <p><strong>Saturday:</strong> 9:00 AM - 6:00 PM</p>
+            <div style="background: white; padding: 40px; border-radius: 20px; border-left: 8px solid #f5576c; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
+                <h3 style="color: #764ba2; margin: 0 0 20px 0; font-size: 26px;">Opening Hours</h3>
+                <p style="margin: 12px 0; color: #555; font-size: 16px;"><strong style="color: #f5576c;">Monday - Friday:</strong> 8:00 AM - 8:00 PM</p>
+                <p style="margin: 12px 0; color: #555; font-size: 16px;"><strong style="color: #f5576c;">Saturday:</strong> 8:00 AM - 7:00 PM</p>
+                <p style="margin: 12px 0; color: #555; font-size: 16px;"><strong style="color: #f5576c;">Sunday:</strong> 12:00 PM - 6:00 PM</p>
                 <br>
-                <h3>Our Promise</h3>
-                <p>
+                <h3 style="color: #764ba2; margin: 0 0 20px 0; font-size: 26px;">Our Promise</h3>
+                <p style="margin: 0; color: #555; font-size: 16px; line-height: 1.7;">
                     We aim to give you quality provisions, clean packaging,
                     polite customer service, and a pleasant shopping experience.
                 </p>
@@ -1039,35 +311,34 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-        <div class="contact-grid">
+    <section class="contact-section" id="contact" style="max-width: 1150px; margin: 70px auto; padding: 0 20px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 35px;">
 
-            <div class="contact-card">
-                <h2>Contact Us</h2>
-                <p><strong>🏪 Shop Name:</strong> D-Light Provision Shop</p>
-                <p><strong>📍 Address:</strong> Benin City, Edo State, Nigeria</p>
-                <p><strong>📞 Phone:</strong> +234 815 187 1036</p>
-                <p><strong>✉ Email:</strong> abudhephzibah@gmail.com</p>
-                <p><strong>🕒 Opening Time:</strong> Monday to Saturday, 8:00 AM - 7:00 PM</p>
-                <p>
+            <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); border-top: 6px solid #667eea;">
+                <h2 style="color: #764ba2; margin: 0 0 25px 0; font-size: 30px;">Contact Us</h2>
+                <p style="margin: 15px 0; color: #555; font-size: 16px;"><strong style="color: #f5576c;">🏪 Shop Name:</strong> Abudhephzibah Global Enterprise</p>
+                <p style="margin: 15px 0; color: #555; font-size: 16px;"><strong style="color: #f5576c;">📍 Address:</strong> Benin City, Edo State, Nigeria</p>
+                <p style="margin: 15px 0; color: #555; font-size: 16px;"><strong style="color: #f5576c;">📞 Phone:</strong> +234 815 1871 036</p>
+                <p style="margin: 15px 0; color: #555; font-size: 16px;"><strong style="color: #f5576c;">✉ Email:</strong> abudhephzibah@email.com</p>
+                <p style="margin: 15px 0; color: #555; font-size: 16px;"><strong style="color: #f5576c;">🕒 Opening Time:</strong> Monday to Saturday, 8:00 AM - 8:00 PM</p>
+                <p style="margin: 20px 0 0 0; color: #555; font-size: 16px; line-height: 1.7;">
                     Visit our shop today for your rice, beans, detergent, cooking
                     ingredients, snacks, and other household provisions.
                 </p>
             </div>
 
-            <!-- This form is only for design. It does not send information because there is no backend. -->
-            <div class="contact-form">
-                <h2>Send a Message</h2>
+            <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); border-top: 6px solid #f5576c;">
+                <h2 style="color: #764ba2; margin: 0 0 25px 0; font-size: 30px;">Send a Message</h2>
 
                 <form>
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" placeholder="Enter your name">
+                    <label for="name" style="display: block; font-weight: bold; margin-top: 15px; margin-bottom: 8px; color: #667eea;">Your Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" style="width: 100%; padding: 14px; border: 2px solid #e0e0e0; border-radius: 8px; font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
 
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" placeholder="Enter your phone number">
+                    <label for="phone" style="display: block; font-weight: bold; margin-top: 15px; margin-bottom: 8px; color: #667eea;">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="Enter your phone number" style="width: 100%; padding: 14px; border: 2px solid #e0e0e0; border-radius: 8px; font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
 
-                    <label for="product">Product You Need</label>
-                    <select id="product">
+                    <label for="product" style="display: block; font-weight: bold; margin-top: 15px; margin-bottom: 8px; color: #667eea;">Product You Need</label>
+                    <select id="product" style="width: 100%; padding: 14px; border: 2px solid #e0e0e0; border-radius: 8px; font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
                         <option>Select a product category</option>
                         <option>Rice and Grains</option>
                         <option>Beans and Legumes</option>
@@ -1077,10 +348,10 @@
                         <option>Personal Care Products</option>
                     </select>
 
-                    <label for="message">Your Message</label>
-                    <textarea id="message" placeholder="Write your message here"></textarea>
+                    <label for="message" style="display: block; font-weight: bold; margin-top: 15px; margin-bottom: 8px; color: #667eea;">Your Message</label>
+                    <textarea id="message" placeholder="Write your message here" style="width: 100%; padding: 14px; border: 2px solid #e0e0e0; border-radius: 8px; font-family: Arial, Helvetica, sans-serif; font-size: 15px; height: 120px; resize: vertical;"></textarea>
 
-                    <button type="button">Submit Message</button>
+                    <button type="button" style="margin-top: 20px; border: none; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px 30px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 16px; width: 100%; box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);">Submit Message</button>
                 </form>
             </div>
 
@@ -1088,50 +359,50 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-grid">
+    <footer style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 55px 8% 25px; box-shadow: 0 -10px 40px rgba(0,0,0,0.3);">
+        <div style="max-width: 1250px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 35px;">
 
             <div>
-                <h3>Abudhephzibah Global Enterprise.</h3>
-                <p>
+                <h3 style="color: #ffd700; margin: 0 0 18px 0; font-size: 24px;">Abudhephzibah Shop</h3>
+                <p style="color: #d0d0d0; line-height: 1.7; font-size: 15px;">
                     Your trusted provision shop for everyday food items,
                     household supplies, and personal-care products.
                 </p>
             </div>
 
             <div>
-                <h3>Food Items</h3>
-                <ul>
-                    <li><a href="#foods">Rice</a></li>
-                    <li><a href="#foods">Beans</a></li>
-                    <li><a href="#foods">Garri</a></li>
-                    <li><a href="#foods">Semovita, Poundo </a></li>
+                <h3 style="color: #ffd700; margin: 0 0 18px 0; font-size: 24px;">Food Items</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin: 10px 0;"><a href="#foods" style="color: #f0f0f0; text-decoration: none; font-size: 15px;">Rice</a></li>
+                    <li style="margin: 10px 0;"><a href="#foods" style="color: #f0f0f0; text-decoration: none; font-size: 15px;">Beans</a></li>
+                    <li style="margin: 10px 0;"><a href="#foods" style="color: #f0f0f0; text-decoration: none; font-size: 15px;">Garri</a></li>
+                    <li style="margin: 10px 0;"><a href="#foods" style="color: #f0f0f0; text-decoration: none; font-size: 15px;">Semolina</a></li>
                 </ul>
             </div>
 
             <div>
-                <h3>Provisions</h3>
-                <ul>
-                    <li><a href="#cleaning">Detergent</a></li>
-                    <li><a href="#others">Cooking Oil</a></li>
-                    <li><a href="#others">Tomato Paste</a></li>
-                    <li><a href="#others">Personal Care</a></li>
+                <h3 style="color: #ffd700; margin: 0 0 18px 0; font-size: 24px;">Provisions</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin: 10px 0;"><a href="#cleaning" style="color: #f0f0f0; text-decoration: none; font-size: 15px;">Detergent</a></li>
+                    <li style="margin: 10px 0;"><a href="#others" style="color: #f0f0f0; text-decoration: none; font-size: 15px;">Cooking Oil</a></li>
+                    <li style="margin: 10px 0;"><a href="#others" style="color: #f0f0f0; text-decoration: none; font-size: 15px;">Tomato Paste</a></li>
+                    <li style="margin: 10px 0;"><a href="#others" style="color: #f0f0f0; text-decoration: none; font-size: 15px;">Personal Care</a></li>
                 </ul>
             </div>
 
             <div>
-                <h3>Contact</h3>
-                <ul>
-                    <li>158 Airport Road, Before First Bank, Benin City, Edo State, Nigeria.</li>
-                    <li>+234 815 1871 036</li>
-                    <li>abudhephzibah@gmail.com</li>
+                <h3 style="color: #ffd700; margin: 0 0 18px 0; font-size: 24px;">Contact</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin: 10px 0; color: #d0d0d0; font-size: 15px;">Benin City, Edo State</li>
+                    <li style="margin: 10px 0; color: #d0d0d0; font-size: 15px;">+234 815 1871 036</li>
+                    <li style="margin: 10px 0; color: #d0d0d0; font-size: 15px;">abudhephzibah@email.com</li>
                 </ul>
             </div>
 
         </div>
 
-        <div class="copyright">
-            <p>&copy; 2026 Abudhephzibah Global Enterprise.  All Rights Reserved.</p>
+        <div style="max-width: 1250px; margin: 35px auto 0; padding-top: 25px; border-top: 2px solid #3a3a5a; text-align: center; color: #a0a0a0; font-size: 14px;">
+            <p style="margin: 0;">&copy; 2026 Abudhephzibah Global Enterprise. All Rights Reserved.</p>
         </div>
     </footer>
 
