@@ -5,10 +5,220 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abudhephzibah Global Enterprise - Provision Shop</title>
     <style>
-        * {
+                * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+margin: 0;
+            padding: 0;
+            box-sizing: border-box;        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Professional Banner Section */
+        .banner-section {
+            width: 100%;
+            min-height: 500px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Decorative Circles */
+        .banner-section::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            top: -100px;
+            left: -100px;
+        }
+
+        .banner-section::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 215, 0, 0.15);
+            border-radius: 50%;
+            bottom: -50px;
+            right: -50px;
+        }
+
+        .banner-content {
+            text-align: center;
+            color: white;
+            z-index: 10;
+            padding: 40px;
+            max-width: 900px;
+        }
+
+        .banner-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            display: block;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .banner-title {
+            font-size: 56px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+            letter-spacing: 1px;
+        }
+
+        .banner-subtitle {
+            font-size: 24px;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 300;
+        }
+
+        .banner-products {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 35px;
+        }
+
+        .product-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: 0.3s;
+        }
+
+        .product-badge:hover {
+            background: rgba(255, 255, 255, 0.35);
+            transform: scale(1.05);
+        }
+
+        .banner-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            color: #764ba2;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 18px 45px;
+            border-radius: 50px;
+            font-size: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .banner-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(135deg, #ffed4e 0%, #ffd700 100%);
+        }
+
+        /* Product Icons Row */
+        .product-icons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .product-icon-item {
+            font-size: 45px;
+            background: rgba(255, 255, 255, 0.15);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            transition: 0.3s;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .product-icon-item:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .product-icon-item:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .product-icon-item:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        .product-icon-item:nth-child(4) {
+            animation-delay: 1.5s;
+        }
+
+        .product-icon-item:nth-child(5) {
+            animation-delay: 2s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-10px) rotate(5deg);
+            }
+        }
+
+        .product-icon-item:hover {
+            transform: scale(1.2) rotate(10deg);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .banner-title {
+                font-size: 36px;
+            }
+
+            .banner-subtitle {
+                font-size: 18px;
+            }
+
+            .product-badge {
+                font-size: 14px;
+                padding: 10px 18px;
+            }
+
+            .banner-button {
+                font-size: 16px;
+                padding: 15px 35px;
+            }
+
+            .product-icon-item {
+                width: 60px;
+                height: 60px;
+                font-size: 30px;
+            }
         }
 
         body {
@@ -559,6 +769,34 @@
 </head>
 
 <body>
+    <!-- Professional Banner -->
+    <section class="banner-section">
+        <div class="banner-content">
+            <span class="banner-icon">🛒</span>
+            
+            <h1 class="banner-title">Abudhephzibah Global Enterprise</h1>
+            
+            <p class="banner-subtitle">Your One-Stop Provision Shop for Quality Household Items</p>
+            
+            <div class="banner-products">
+                <span class="product-badge">🍚 Rice & Grains</span>
+                <span class="product-badge">🫘 Beans & Legumes</span>
+                <span class="product-badge">🧼 Detergents</span>
+                <span class="product-badge">🥫 Canned Foods</span>
+                <span class="product-badge">🧴 Personal Care</span>
+            </div>
+            
+            <a href="#products" class="banner-button">Shop Now 🛍️</a>
+            
+            <div class="product-icons">
+                <div class="product-icon-item">🍚</div>
+                <div class="product-icon-item">🫘</div>
+                <div class="product-icon-item">🧼</div>
+                <div class="product-icon-item">🥫</div>
+                <div class="product-icon-item">🍪</div>
+            </div>
+        </div>
+    </section>
 
     <!-- Top Contact Bar -->
     <div class="top-bar">
