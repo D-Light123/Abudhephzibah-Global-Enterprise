@@ -1302,6 +1302,78 @@ Abudhephzibah Global Enterprise</h1>
         }
     }
 </style>
+<!-- WhatsApp Order Form -->
+<section style="background: white; padding: 50px 20px; margin: 50px auto; max-width: 800px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
+    <h2 style="text-align: center; color: #764ba2; font-size: 32px; margin-bottom: 15px;">🛒 Quick Order via WhatsApp</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 40px;">Fill the form and we'll send your order directly to WhatsApp</p>
+    
+    <form id="whatsappOrderForm" style="max-width: 600px; margin: auto;">
+        <label style="display: block; font-weight: bold; margin-bottom: 8px; color: #667eea;">Your Name</label>
+        <input type="text" id="customerName" placeholder="Enter your name" required 
+               style="width: 100%; padding: 14px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 15px; margin-bottom: 20px;">
+        
+        <label style="display: block; font-weight: bold; margin-bottom: 8px; color: #667eea;">Product You Want</label>
+        <input type="text" id="productName" placeholder="e.g., 5kg Rice, 2kg Beans, Omo Detergent" required 
+               style="width: 100%; padding: 14px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 15px; margin-bottom: 20px;">
+        
+        <label style="display: block; font-weight: bold; margin-bottom: 8px; color: #667eea;">Quantity</label>
+        <input type="text" id="productQuantity" placeholder="e.g., 2 packs, 5kg, 10 pieces" required 
+               style="width: 100%; padding: 14px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 15px; margin-bottom: 20px;">
+        
+        <label style="display: block; font-weight: bold; margin-bottom: 8px; color: #667eea;">Delivery Address (Optional)</label>
+        <textarea id="deliveryAddress" placeholder="Enter your delivery address" rows="3" 
+                  style="width: 100%; padding: 14px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 15px; margin-bottom: 20px; resize: vertical;"></textarea>
+        
+        <button type="button" onclick="sendToWhatsApp()" 
+                style="width: 100%; background: #25D366; color: white; border: none; padding: 18px; border-radius: 8px; font-size: 18px; font-weight: bold; cursor: pointer; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); transition: 0.3s;">
+            📱 Send Order to WhatsApp
+        </button>
+    </form>
+</section>
+
+<!-- WhatsApp Order Script -->
+<script>
+function sendToWhatsApp() {
+    // Get form values
+    const name = document.getElementById('customerName').value;
+    const product = document.getElementById('productName').value;
+    const quantity = document.getElementById('productQuantity').value;
+    const address = document.getElementById('deliveryAddress').value;
+    
+    // Validate
+    if (!name || !product || !quantity) {
+        alert('Please fill in all required fields (Name, Product, and Quantity)');
+        return;
+    }
+    
+    // Create message
+    let message = `*NEW ORDER* 🛒
+
+`;
+    message += `*Name:* ${name}
+`;
+    message += `*Product:* ${product}
+`;
+    message += `*Quantity:* ${quantity}
+`;
+    if (address) {
+        message += `*Delivery Address:* ${address}
+`;
+    }
+    message += `
+Hello, I want to place this order. Please confirm availability and total price. Thank you!`;
+    
+    // Encode for URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // WhatsApp number
+    const phoneNumber = '2348151871036';
+    
+    // Open WhatsApp
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank');
+}
+</script>
     <!-- Footer -->
     <footer>
         <div class="footer-grid">
