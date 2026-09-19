@@ -1109,6 +1109,41 @@
 
         </div>
     </section>
+<!-- WhatsApp Order Script -->
+    <script>
+    function sendToWhatsApp() {
+        const name = document.getElementById('customerName').value;
+        const product = document.getElementById('productName').value;
+        const quantity = document.getElementById('productQuantity').value;
+        const address = document.getElementById('deliveryAddress').value;
+        
+        if (!name || !product || !quantity) {
+            alert('Please fill in all required fields (Name, Product, and Quantity)');
+            return;
+        }
+        
+        let message = `*NEW ORDER* 🛒
+
+`;
+        message += `*Name:* ${name}
+`;
+        message += `*Product:* ${product}
+`;
+        message += `*Quantity:* ${quantity}
+`;
+        if (address) {
+            message += `*Delivery Address:* ${address}
+`;
+        }
+        message += `
+Hello, I want to place this order. Please confirm availability and total price. Thank you!`;
+        
+        const encodedMessage = encodeURIComponent(message);
+        const phoneNumber = '2348169710765';
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+        window.open(whatsappUrl, '_blank');
+    }
+    </script>
 
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/2348169710765?text=Hello, I want to make an order from Abudhephzibah Global Enterprise" 
@@ -1165,42 +1200,6 @@
             <p>&copy; 2026 Abudhephzibah Global Enterprise. All Rights Reserved.</p>
         </div>
     </footer>
-
-    <!-- WhatsApp Order Script -->
-    <script>
-    function sendToWhatsApp() {
-        const name = document.getElementById('customerName').value;
-        const product = document.getElementById('productName').value;
-        const quantity = document.getElementById('productQuantity').value;
-        const address = document.getElementById('deliveryAddress').value;
-        
-        if (!name || !product || !quantity) {
-            alert('Please fill in all required fields (Name, Product, and Quantity)');
-            return;
-        }
-        
-        let message = `*NEW ORDER* 🛒
-
-`;
-        message += `*Name:* ${name}
-`;
-        message += `*Product:* ${product}
-`;
-        message += `*Quantity:* ${quantity}
-`;
-        if (address) {
-            message += `*Delivery Address:* ${address}
-`;
-        }
-        message += `
-Hello, I want to place this order. Please confirm availability and total price. Thank you!`;
-        
-        const encodedMessage = encodeURIComponent(message);
-        const phoneNumber = '2348169710765';
-        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-        window.open(whatsappUrl, '_blank');
-    }
-    </script>
 
 </body>
 </html>
