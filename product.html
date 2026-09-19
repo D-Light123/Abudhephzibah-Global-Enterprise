@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Abudhephzibah Global Enterprise</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        /* Top Contact Bar */
+        .top-bar {
+            background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 14px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .top-bar p {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        /* Header with Logo */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .logo h1 {
+            color: white;
+            font-size: 32px;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .logo p {
+            color: #f0f0f0;
+            font-size: 15px;
+            margin: 5px 0 0 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background-color: rgba(255, 215, 0, 0.2);
+        }
+
+        /* Page Banner */
+        .page-banner {
+            background: linear-gradient(135deg, rgba(240, 147, 251, 0.95) 0%, rgba(245, 87, 108, 0.95) 100%);
+            padding: 80px 8%;
+            text-align: center;
+            color: white;
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.2);
+        }
+
+        .page-banner h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+        }
+
+        .page-banner p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        /* Main Content */
+        .products-container {
+            max-width: 1300px;
+            margin: auto;
+            padding: 70px 20px;
+        }
+
+        /* Category Filter */
+        .category-filter {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .category-filter h2 {
+            color: #764ba2;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .filter-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .filter-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        /* Section Headings */
+        .section-heading {
+            color: white;
+            font-size: 32px;
+            margin: 0 0 35px 0;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        .heading-purple {
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .heading-pink {
+            background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .heading-blue {
+            background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .heading-orange {
+            background: linear-gradient(90deg, #fa709a 0%, #fee140 100%);
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 70px;
+        }
+
+        .product-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid #e0e7ff;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .product-icon {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 35px;
+            font-size: 60px;
+            text-align: center;
+        }
+
+        .product-details {
+            padding: 25px;
+        }
+
+        .product-details h3 {
+            color: #764ba2;
+            font-size: 24px;
+            margin: 0 0 12px 0;
+            font-weight: bold;
+        }
+
+        .product-details p {
+            color: #666;
+            font-size: 15px;
+            min-height: 50px;
+            margin: 0 0 15px 0;
+            line-height: 1.6;
+        }
+
+        .price {
+            font-size: 26px;
+            color: #f5576c;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .unit {
+            color: #999;
+            font-size: 15px;
+        }
+
+        .stock {
+            display: inline-block;
+            margin-top: 15px;
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(17, 153, 142, 0.3);
+        }
+
+        .low-stock {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .order-btn {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .order-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 60px 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 50px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        .cta-section h2 {
+            color: #764ba2;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.6);
+        }
+
+        .cta-button.whatsapp {
+            background: #25D366;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 55px 8% 25px;
+            box-shadow: 0 -10px 40px rgba(0,0,0,0.3);
+        }
+
+        .footer-grid {
+            max-width: 1250px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 35px;
+        }
+
+        footer h3 {
+            color: #ffd700;
+            margin: 0 0 18px 0;
+            font-size: 24px;
+        }
+
+        footer p {
+            color: #d0d0d0;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer li {
+            margin: 10px 0;
+        }
+
+        footer a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        footer a:hover {
+            color: #ffd700;
+        }
+
+        .copyright {
+            max-width: 1250px;
+            margin: 35px auto 0;
+            padding-top: 25px;
+            border-top: 2px solid #3a3a5a;
+            text-align: center;
+            color: #a0a0a0;
+            font-size: 14px;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+            transition: 0.3s;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav ul {
+                justify-content: center;
+            }
+
+            .page-banner h1 {
+                font-size: 32px;
+            }
+
+            .page-banner p {
+                font-size: 16px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <p>📞 Call us: +234 816 971 0765 | ✉ Email: abudhephzibah@email.com</p>
+    </div>
+
+    <!-- Website Header -->
+    <header>
+        <div class="logo">
+            <h1>🛒 Abudhephzibah Global Enterprise</h1>
+            <p>Quality provisions at affordable prices</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <h1>🛒 Our Products</h1>
+        <p>Browse our wide range of quality provisions at affordable prices</p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="products-container">
+
+        <!-- Category Filter -->
+        <section class="category-filter">
+            <h2>📋 Filter by Category</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="scrollToSection('foods')">🍚 Rice & Grains</button>
+                <button class="filter-btn" onclick="scrollToSection('cleaning')">🧼 Detergents</button>
+                <button class="filter-btn" onclick="scrollToSection('cooking')">🫗 Cooking</button>
+                <button class="filter-btn" onclick="scrollToSection('others')">🥫 Others</button>
+            </div>
+        </section>
+
+        <!-- Rice and Grains -->
+        <section id="foods">
+            <h2 class="section-heading heading-purple">🍚 Rice, Beans and Grains</h2>
+
+            <div class="product-grid">
+
+                <article class="product-card">
+                    <div class="product-icon">🍚</div>
+                    <div class="product-details">
+                        <h3>Local Rice</h3>
+                        <p>Clean Nigerian local rice for everyday meals and parties.</p>
+                        <p class="price">₦1,500 <span class="unit">per kg</span></p>
+                        <span class="stock">✓ Available</span>
+                        <br>
+                        <a href="https://wa.me/2348169710765?text=Hello, I want to order Local Rice" class="order-btn" target="_blank">📱 Order Now</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-icon">🍚</div>
+                    <div class="product-details">
+                        <h3>Foreign Rice</h3>
+                        <p>Long-grain parboiled rice available in different bag sizes.</p>
+                        <p class="price">₦2,000 <span class="unit">per kg</span></p>
+                        <span class="stock">✓ Available</span>
+                        <br>
+                        <a href="https://wa.me/2348169710765?text=Hello, I want to order Foreign Rice" class="order-btn" target="_blank">📱 Order Now</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-icon">🫘</div>
+                    <div class="product-details">
+                        <h3>Honey Beans</h3>
+                        <p>Good-quality honey beans for beans porridge, akara, and moi-moi.</p>
+                        <p class="price">₦1,800 <span class="unit">per kg</span></p>
+                        <span class="stock">✓ Available</span>
+                        <br>
+                        <a href="https://wa.me/2348169710765?text=Hello, I want to order Honey Beans" class="order-btn" target="_blank">📱 Order Now</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-icon">🫘</div>
+                    <div class="product-details">
+                        <h3>White Beans</h3>
+                        <p>Dry white beans, carefully selected and properly packaged.</p>
+                        <p class="price">₦1,600 <span class="unit">per kg</span></p>
+                        <span class="stock">✓ Available</span>
+                        <br>
+                        <a href="https://wa.me/2348169710765?text=Hello, I want to order White Beans" class="order-btn" target="_blank">📱 Order Now</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-icon">🌾</div>
+                    <div class="product-details">
+                        <h3>Garri</h3>
+                        <p>Yellow and white garri for drinking, eba, and other meals.</p>
+                        <p class="price">₦900 <span class="unit">per kg</span></p>
+                        <span class="stock">✓ Available</span>
+                        <br>
+                        <a href="https://wa.me/2348169710765?text=Hello, I want to order Garri" class="order-btn" target="_blank">📱 Order Now</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">🌽</div>
+                    <div class="product-details">
+                        <h3>Maize / Corn</h3>
+                        <p>Dried maize suitable for pap, corn flour, and animal feed.</p>
+                        <p class="price">₦700 <span class="unit">per kg</span></p>
+                        <span class="stock low-stock">⚠ Few Left</span>
+                        <br>
+                        <a href="https://wa.me/2348169710765?text=Hello, I want to order Maize" class="order-btn" target="_blank">📱 Order Now</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Cleaning Products -->
+        <section id="cleaning">
+            <h2 class="section-heading heading-pink">🧼 Detergents and Cleaning Products</h2>
+
+            <div class="product-grid">
+
+                <article class="product-card">
+                    <div class="product-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">🧼</div>
+                    <div class="product-details">
+                        <h3>Omo Detergent</h3>
+                        <p>Detergent powder for washing clothes and removing stains.</p>
+                        <p class="price">₦2,500 <span class="unit">per pack</span></p>
+                        <span class="stock">✓ Available</span>
+                        <br>
+                        <a href="https://wa.me/2348169710765?text=Hello, I want to order Omo Detergent" class="order-btn" target="_blank">📱 Order Now</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">🧺</div>
+                    <div class="product-details">
+                        <h3>Ariel Detergent</h3>
+                        <p>Strong washing powder for white and coloured clothes.</p>
+                        <p class="price">₦3,000 <span class="unit">per pack</span></p>
+                        <span class="stock">✓ Available</span>
+                        <br>
+                        <a href="https://wa.me/2348169710765?text=Hello, I want to order Ariel Detergent" class="order-btn" target="_blank">📱 Order Now</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">✨</div>
+                    <div class="product-details">
+                        <h3>Sunlight Detergent</h3>
+                        <p>Affordable detergent for hand washing and laundry.</p>
+                        <p class="price">₦1,800 <span class="unit">per pack</span></p>
+                        <span class="stock">✓ Available</span>
+                        <br>
+                        <a href="https://wa.me/2348169710765?text=Hello, I want to order Sunlight Detergent" class="order-btn" target="_blank">📱 Order Now</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">🍋</div>
+                    <div class="product-details">
+                        <h3>Dishwashing Liquid</h3>
+                        <p>Liquid soap for washing plates, cups, pots, and utensils.</p>
+                        <p class="price">₦800 <span class="unit">per bottle</span></p>
+                        <span class="stock">✓ Available</span>
+                        <br>
+                        <a href="https://wa.me/2348169710765?text=Hello, I want to order Dishwashing Liquid" class="order-btn" target="_blank">📱 Order Now</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">🧽</div>
+                    <div class="product-details">
+                        <h3>Toilet Cleaner</h3>
+                        <p>Cleaning liquid for fresh and hygienic toilets.</p>
+                        <p class="price">₦700 <span class="unit">per bottle</span></p>
+                        <span class="stock">✓ Available</span>
+                        <br>
+                        <a href="https://wa.me/2348169710765?text=Hello, I want to order Toilet Cleaner" class="order-btn" target="_blank">📱 Order Now</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">🧻</div>
+                    <div class="product-details">
+                        <h3>Tissue Paper</h3>
+                        <p>Soft tissue paper for home, office, and personal use.</p>
+                        <p class="price">₦500 <span class="unit">per roll</span></p>
+                        <span class="stock">✓ Available</span>
+                        <br>
+                        <a href="https://wa.me/2348169710765?text=Hello, I want to order Tissue Paper" class="order-btn" target="_blank">📱 Order Now</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Cooking Ingredients -->
+        <section id="cooking">
+            <h2 class="section-heading heading-blue">🫗 Cooking Ingredients & Oil</h2>
+
+            <div class="product-grid">
+
+                <article class="product-card">
+                    <div class="product-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">🫗</div>
+                    <div class="product-details">
+                        <h3>Vegetable Oil</h3>
+                        <p>Cooking oil for frying, baking, and preparing meals.</p>
+                        <p class="price">₦2,500 <span class="unit">per litre</span></p>
+                        <span class="stock">✓ Available</span>
+                        <br>
+                        <a href="https://wa.me/2348169710765?text=Hello, I want to order Vegetable Oil" class="order-btn" target="_blank">📱 Order Now</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">🟠</div>
+                    <div class="product-details">
+                        <h3>Palm Oil</h3>
+                        <p>Fresh red palm oil for soups, stew, and local dishes.</p>
+                        <p class="price">₦2,100 <span class="unit">per litre</span></p>
+                        <span class="stock">✓ Available</span>
+                        <br>
+                        <a href="https://wa.me/2348169710765?text=Hello, I want to order Palm Oil" class="order-btn" target="_blank">📱 Order Now</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">🧂</div>
+                    <div class="product-details">
+                        <h3>Salt</h3>
+                        <p>Fine cooking salt for your everyday kitchen needs.</p>
+                        <p class="price">₦400 <span class="unit">per pack</span></p>
+                        <span class="stock">✓ Available</span>
+                        <br>
+                        <a href="https://wa.me/2348169710765?text=Hello, I want to order Salt" class="order-btn" target="_blank">📱 Order Now</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">🍬</div>
+                    <div class="product-details">
+                        <h3>Sugar</h3>
+                        <p>Granulated white sugar for drinks, baking, and cooking.</p>
+                        <p class="price">₦1,000 <span class="unit">per kg</span></p>
+                        <span class="stock">✓ Available</span>
+                        <br>
+                        <a href="https://wa.me/2348169710765?text=Hello, I want to order Sugar" class="order-btn" target="_blank">📱 Order Now</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">🧊</div>
+                    <div class="product-details">
+                        <h3>Seasoning Cubes</h3>
+                        <p>Seasoning cubes and spices for tasty meals.</p>
+                        <p class="price">₦500 <span class="unit">per pack</span></p>
+                        <span class="stock">✓ Available</span>
+                        <br>
+                        <a href="https://wa.me/2348169710765?text=Hello, I want to order Seasoning Cubes" class="order-btn" target="_blank">📱 Order Now</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Other Provisions -->
+        <section id="others">
+            <h2 class="section-heading heading-orange">🥫 Canned Foods, Snacks & More</h2>
+
+            <div class="product-grid">
+
+                <article class="product-card">
+                    <div class="product-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">🥫</div>
+                    <div class="product-details">
+                        <h3>Tomato Paste</h3>
+                        <p>Tomato paste for stew, sauce, jollof rice, and soup.</p>
+                        <p class="price">₦600 <span class="unit">per tin</span></p>
+                        <span class="stock">✓ Available</span>
+                        <br>
+                        <a href="https://wa.me/2348169710765?text=Hello, I want to order Tomato Paste" class="order-btn" target="_blank">📱 Order Now</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">🐟</div>
+                    <div class="product-details">
+                        <h3>Sardines</h3>
+                        <p>Canned sardines for breakfast, snacks, and meals.</p>
+                        <p class="price">₦800 <span class="unit">per tin</span></p>
+                        <span class="stock">✓ Available</span>
+                        <br>
+                        <a href="https://wa.me/2348169710765?text=Hello, I want to order Sardines" class="order-btn" target="_blank">📱 Order Now</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">🍝</div>
+                    <div class="product-details">
+                        <h3>Spaghetti</h3>
+                        <p>Long pasta for quick meals, sauce, and jollof spaghetti.</p>
+                        <p class="price">₦700 <span class="unit">per pack</span></p>
+                        <span class="stock">✓ Available</span>
+                        <br>
+                        <a href="https://wa.me/2348169710765?text=Hello, I want to order Spaghetti" class="order-btn" target="_blank">📱 Order Now</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">🍪</div>
+                    <div class="product-details">
+                        <h3>Biscuits</h3>
+                        <p>Sweet and cream biscuits for children and adults.</p>
+                        <p class="price">₦300 <span class="unit">per pack</span></p>
+                        <span class="stock">✓ Available</span>
+                        <br>
+                        <a href="https://wa.me/2348169710765?text=Hello, I want to order Biscuits" class="order-btn" target="_blank">📱 Order Now</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">🥤</div>
+                    <div class="product-details">
+                        <h3>Soft Drinks</h3>
+                        <p>Cold beverages and soft drinks in different flavours.</p>
+                        <p class="price">₦300 <span class="unit">per bottle</span></p>
+                        <span class="stock">✓ Available</span>
+                        <br>
+                        <a href="https://wa.me/2348169710765?text=Hello, I want to order Soft Drinks" class="order-btn" target="_blank">📱 Order Now</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">🧴</div>
+                    <div class="product-details">
+                        <h3>Body Cream</h3>
+                        <p>Body lotion and cream for healthy and moisturised skin.</p>
+                        <p class="price">₦1,200 <span class="unit">per bottle</span></p>
+                        <span class="stock">✓ Available</span>
+                        <br>
+                        <a href="https://wa.me/2348169710765?text=Hello, I want to order Body Cream" class="order-btn" target="_blank">📱 Order Now</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <h2>🛍️ Ready to Place Your Order?</h2>
+            <p>
+                Contact us via WhatsApp or visit our shop in Benin City. 
+                We offer quality products at affordable prices with excellent customer service.
+            </p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/2348169710765?text=Hello, I want to make an order" class="cta-button whatsapp" target="_blank">📱 Order via WhatsApp</a>
+                <a href="index.html#contact" class="cta-button">📍 Visit Our Shop</a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+
+            <div>
+                <h3>Abudhephzibah Shop</h3>
+                <p>
+                    Your trusted provision shop for everyday food items,
+                    household supplies, and personal-care products.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Product Categories</h3>
+                <ul>
+                    <li><a href="#foods">Rice & Grains</a></li>
+                    <li><a href="#cleaning">Detergents</a></li>
+                    <li><a href="#cooking">Cooking Ingredients</a></li>
+                    <li><a href="#others">Canned Foods</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <ul>
+                    <li>Benin City, Edo State</li>
+                    <li>+234 816 971 0765</li>
+                    <li>abudhephzibah@email.com</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2026 Abudhephzibah Global Enterprise. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/2348169710765?text=Hello, I want to make an order from Abudhephzibah Global Enterprise" 
+       class="whatsapp-float"
+       target="_blank">
+       <span style="font-size: 24px;">💬</span>
+       <span>Chat with Us</span>
+    </a>
+
+    <!-- Scroll Script -->
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    </script>
+
+</body>
+</html>
+📁 How to Use This Products Page
+Step 1: Save the File
+Save this code as products.html in the same folder as your index.html and about.html
+Step 2: Upload to GitHub
+Upload all three files to your GitHub repository:
+index.html
+about.html
+products.html
+Step 3: Access the Page
+Your products page will be available at:
+https://d-light123.github.io/Abudhephzibah-Global-Enterprise/products.html
+✅ Features of This Products Page
+Category filter buttons - jump to different product sections
+4 product categories - Rice & Grains, Detergents, Cooking, Others
+30+ products with prices and descriptions
+Order Now buttons - each product has a WhatsApp order link
+Responsive design - works on mobile and desktop
+Floating WhatsApp button - easy customer contact
+Navigation menu - links to all pages
+Professional design - matches your website theme
+🔗 Link Products Page to Other Pages
+Update your navigation menus in index.html and about.html:
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+</nav>
