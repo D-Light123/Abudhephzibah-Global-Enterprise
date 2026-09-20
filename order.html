@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Place Your Order - Abudhephzibah Global Enterprise</title>
+    <title>Order - Abudhephzibah Global Enterprise</title>
     <style>
         * {
             margin: 0;
@@ -108,7 +108,7 @@
 
         /* Main Content */
         .order-container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: auto;
             padding: 70px 20px;
         }
@@ -136,8 +136,16 @@
             margin-bottom: 40px;
         }
 
+        .order-form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .form-group label {
@@ -168,54 +176,49 @@
             box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         }
 
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
         .form-group textarea {
             height: 120px;
             resize: vertical;
         }
 
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
         .submit-btn {
-            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
-            padding: 18px 40px;
+            padding: 16px 40px;
             border-radius: 50px;
             font-size: 18px;
             font-weight: bold;
             cursor: pointer;
             transition: 0.3s;
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
             width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
         }
 
         .submit-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.6);
         }
 
         /* Order Info Cards */
         .order-info-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
             margin-bottom: 50px;
         }
 
         .order-info-card {
             background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
             text-align: center;
+            transition: 0.3s;
             border-top: 6px solid;
         }
 
@@ -231,76 +234,25 @@
             border-top-color: #4facfe;
         }
 
+        .order-info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+        }
+
         .order-info-card .icon {
-            font-size: 45px;
-            margin-bottom: 15px;
+            font-size: 50px;
+            margin-bottom: 20px;
         }
 
         .order-info-card h3 {
             color: #764ba2;
-            font-size: 20px;
-            margin-bottom: 12px;
+            font-size: 24px;
+            margin-bottom: 15px;
         }
 
         .order-info-card p {
-            color: #666;
-            font-size: 15px;
-            line-height: 1.6;
-        }
-
-        /* How to Order Section */
-        .how-to-order {
-            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-            padding: 50px;
-            border-radius: 20px;
-            margin-bottom: 50px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-        }
-
-        .how-to-order h2 {
-            color: #764ba2;
-            font-size: 36px;
-            text-align: center;
-            margin-bottom: 35px;
-        }
-
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-        }
-
-        .step-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-
-        .step-number {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-            margin: 0 auto 20px auto;
-        }
-
-        .step-card h3 {
-            color: #764ba2;
-            font-size: 20px;
-            margin-bottom: 12px;
-        }
-
-        .step-card p {
-            color: #666;
-            font-size: 15px;
+            color: #555;
+            font-size: 16px;
             line-height: 1.6;
         }
 
@@ -461,13 +413,12 @@
                 font-size: 16px;
             }
 
-            .order-form-section,
-            .how-to-order {
-                padding: 30px 20px;
+            .order-form-grid {
+                grid-template-columns: 1fr;
             }
 
-            .form-row {
-                grid-template-columns: 1fr;
+            .order-form-section {
+                padding: 30px 20px;
             }
 
             .cta-buttons {
@@ -503,17 +454,17 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="order.html" class="active">Order</a></li>
+                <li><a href="product.html">Products</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="order.html" class="active">Order</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Page Banner -->
     <section class="page-banner">
-        <h1>🛒 Place Your Order</h1>
-        <p>Fill out the form below and we'll process your order quickly</p>
+        <h1>🛍️ Place Your Order</h1>
+        <p>Fill the form below to order your provisions quickly and easily</p>
     </section>
 
     <!-- Main Content -->
@@ -522,32 +473,34 @@
         <!-- Order Info Cards -->
         <div class="order-info-grid">
             <div class="order-info-card">
-                <div class="icon">⚡</div>
-                <h3>Fast Processing</h3>
-                <p>We process orders within 24 hours</p>
-            </div>
-
-            <div class="order-info-card">
                 <div class="icon">🚚</div>
-                <h3>Quick Delivery</h3>
-                <p>Fast delivery within Benin City</p>
+                <h3>Fast Delivery</h3>
+                <p>We deliver within Benin City and nearby areas.</p>
             </div>
 
             <div class="order-info-card">
-                <div class="icon">💯</div>
-                <h3>Quality Guarantee</h3>
-                <p>100% quality products guaranteed</p>
+                <div class="icon">💰</div>
+                <h3>Affordable Prices</h3>
+                <p>Get quality provisions at prices that fit your budget.</p>
+            </div>
+
+            <div class="order-info-card">
+                <div class="icon">✅</div>
+                <h3>Quality Guaranteed</h3>
+                <p>We stock only carefully selected, quality products.</p>
             </div>
         </div>
 
         <!-- Order Form Section -->
         <section class="order-form-section">
             <h2>📝 Order Form</h2>
-            <p>Fill in your order details and we'll contact you shortly</p>
+            <p>Complete the form and we will contact you to confirm your order</p>
 
             <form action="https://formsubmit.co/el/tucede" method="post">
-                
-                <div class="form-row">
+                <!-- Redirect to thank-you page after submission -->
+                <input type="hidden" name="_next" value="https://D-Light123.github.io/Abudhephzibah-Global-Enterprise/thanks.html">
+
+                <div class="order-form-grid">
                     <div class="form-group">
                         <label for="name">Full Name *</label>
                         <input type="text" id="name" name="name" placeholder="Enter your full name" required>
@@ -557,9 +510,7 @@
                         <label for="phone">Phone Number *</label>
                         <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
                     </div>
-                </div>
 
-                <div class="form-row">
                     <div class="form-group">
                         <label for="email">Email Address</label>
                         <input type="email" id="email" name="email" placeholder="Enter your email (optional)">
@@ -567,135 +518,52 @@
 
                     <div class="form-group">
                         <label for="location">Delivery Location *</label>
-                        <input type="text" id="location" name="location" placeholder="e.g., Benin City, Edo State" required>
+                        <input type="text" id="location" name="location" placeholder="e.g. Uselu, Benin City" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="product-category">Product Category *</label>
+                        <select id="product-category" name="product_category" required>
+                            <option value="">Select a category</option>
+                            <option value="Rice and Grains">Rice and Grains</option>
+                            <option value="Beans and Legumes">Beans and Legumes</option>
+                            <option value="Detergents and Cleaning Products">Detergents and Cleaning Products</option>
+                            <option value="Cooking Ingredients">Cooking Ingredients</option>
+                            <option value="Snacks and Beverages">Snacks and Beverages</option>
+                            <option value="Personal Care Products">Personal Care Products</option>
+                            <option value="Multiple Categories">Multiple Categories</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantity">Estimated Quantity / Budget *</label>
+                        <input type="text" id="quantity" name="quantity" placeholder="e.g. 5kg rice, ₦10,000 budget" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="order-details">Order Details *</label>
+                        <textarea id="order-details" name="order_details" placeholder="List the items you want to order (e.g. 5kg Local Rice, 2 litres Palm Oil, 1 pack Omo Detergent)" required></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="notes">Additional Notes (optional)</label>
+                        <textarea id="notes" name="notes" placeholder="Any special instructions or questions?"></textarea>
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="product-category">Product Category *</label>
-                    <select id="product-category" name="product_category" required>
-                        <option value="">Select a category</option>
-                        <option value="Rice and Grains">🍚 Rice and Grains</option>
-                        <option value="Beans and Legumes">🫘 Beans and Legumes</option>
-                        <option value="Detergents and Cleaning">🧼 Detergents and Cleaning</option>
-                        <option value="Cooking Oil and Ingredients">🫗 Cooking Oil and Ingredients</option>
-                        <option value="Canned and Packaged Foods">🥫 Canned and Packaged Foods</option>
-                        <option value="Snacks and Beverages">🍪 Snacks and Beverages</option>
-                        <option value="Personal Care">🧴 Personal Care</option>
-                        <option value="Multiple Items">🛒 Multiple Items</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="order-details">Order Details *</label>
-                    <textarea id="order-details" name="order_details" placeholder="List the items you want to order with quantities. Example: 5kg Local Rice, 2kg Honey Beans, 1 pack Omo Detergent..." required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="delivery-date">Preferred Delivery Date</label>
-                    <input type="date" id="delivery-date" name="delivery_date">
-                </div>
-
-                <div class="form-group">
-                    <label for="payment-method">Preferred Payment Method</label>
-                    <select id="payment-method" name="payment_method">
-                        <option value="">Select payment method</option>
-                        <option value="Cash on Delivery">💵 Cash on Delivery</option>
-                        <option value="Bank Transfer">🏦 Bank Transfer</option>
-                        <option value="POS Payment">💳 POS Payment</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="notes">Additional Notes (Optional)</label>
-                    <textarea id="notes" name="notes" placeholder="Any special instructions or questions..." style="height: 80px;"></textarea>
-                </div>
-
-                <!-- Hidden Fields for Auto-Reply -->
-                <input type="hidden" name="_subject" value="🛒 New Order from Abudhephzibah Customer!">
-                <input type="hidden" name="_autoresponse" value="Hello {{name}},
-
-Thank you for placing an order with Abudhephzibah Global Enterprise! 🛒
-
-ORDER RECEIVED ✅
-We have received your order and will process it shortly.
-
-ORDER DETAILS:
-Category: {{product_category}}
-Items: {{order_details}}
-Delivery Location: {{location}}
-Preferred Date: {{delivery_date}}
-Payment Method: {{payment_method}}
-
-NEXT STEPS:
-1. We will contact you within 24 hours to confirm your order
-2. Confirm availability and total price
-3. Arrange delivery or pickup
-4. Make payment (Cash, Transfer, or POS)
-
-For urgent inquiries:
-📱 WhatsApp: +234 816 971 0765
-📍 Location: Benin City, Edo State
-
-Thank you for choosing us!
-
-Best regards,
-Abudhephzibah Global Enterprise Team
-Quality provisions at affordable prices! 🛍️">
-
-                <button type="submit" class="submit-btn">
-                    <span>📱</span>
-                    <span>Send Order via WhatsApp</span>
-                </button>
+                <button type="submit" class="submit-btn">🛒 Submit Order</button>
             </form>
-        </section>
-
-        <!-- How to Order Section -->
-        <section class="how-to-order">
-            <h2>📋 How to Order</h2>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h3>Browse Products</h3>
-                    <p>Check our products page to see available items and prices</p>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h3>Fill Order Form</h3>
-                    <p>Complete the order form with your details and items needed</p>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h3>We Contact You</h3>
-                    <p>We'll call or message you to confirm your order and total cost</p>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-number">4</div>
-                    <h3>Make Payment</h3>
-                    <p>Pay via cash, bank transfer, or POS on delivery</p>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-number">5</div>
-                    <h3>Receive Order</h3>
-                    <p>Get your items delivered to your location or pick up from shop</p>
-                </div>
-            </div>
         </section>
 
         <!-- Call to Action -->
         <section class="cta-section">
-            <h2>🛍️ Need Help with Your Order?</h2>
+            <h2>📱 Prefer to Order via WhatsApp?</h2>
             <p>
-                Our team is ready to assist you with product selection, pricing, 
-                and delivery arrangements. Contact us today!
+                You can also send your order directly on WhatsApp for faster response.
             </p>
             <div class="cta-buttons">
-                <a href="https://wa.me/2348169710765?text=Hello, I need help with my order" class="cta-button whatsapp" target="_blank">💬 Chat on WhatsApp</a>
-                <a href="products.html" class="cta-button">🛒 View Products</a>
+                <a href="https://wa.me/2348169710765?text=Hello, I want to place an order" class="cta-button whatsapp" target="_blank">💬 Order on WhatsApp</a>
+                <a href="product.html" class="cta-button">🛒 View Products</a>
             </div>
         </section>
 
@@ -718,27 +586,27 @@ Quality provisions at affordable prices! 🛍️">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="order.html">Order Now</a></li>
+                    <li><a href="product.html">Products</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
 
             <div>
-                <h3>Order Support</h3>
-                <ul>
-                    <li><a href="https://wa.me/2348169710765" target="_blank">WhatsApp Support</a></li>
-                    <li><a href="tel:+2348169710765">Call Us</a></li>
-                    <li><a href="mailto:abudhephzibah@email.com">Email Us</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h3>Contact</h3>
+                <h3>Contact Info</h3>
                 <ul>
                     <li>Benin City, Edo State</li>
                     <li>+234 816 971 0765</li>
                     <li>abudhephzibah@email.com</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://wa.me/2348169710765" target="_blank">WhatsApp</a></li>
+                    <li><a href="#" target="_blank">Facebook</a></li>
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                    <li><a href="#" target="_blank">Twitter</a></li>
                 </ul>
             </div>
 
@@ -750,11 +618,11 @@ Quality provisions at affordable prices! 🛍️">
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/2348169710765?text=Hello, I need help with my order" 
+    <a href="https://wa.me/2348169710765?text=Hello, I want to make an order from Abudhephzibah Global Enterprise" 
        class="whatsapp-float"
        target="_blank">
        <span style="font-size: 24px;">💬</span>
-       <span>Get Help</span>
+       <span>Chat with Us</span>
     </a>
 
 </body>
