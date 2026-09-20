@@ -454,7 +454,7 @@
                 <li><a href="about.html" class="active">About</a></li>
                 <li><a href="product.html">Products</a></li>
                 <li><a href="contact.html">Contact</a></li>
-<li><a href="order.html" class="active">Order</a></li>
+                <li><a href="order.html">Order</a></li>
             </ul>
         </nav>
     </header>
@@ -661,5 +661,46 @@
        <span>Chat with Us</span>
     </a>
 
+</body>
+</html>
+How to use your FormSubmit ID on the Contact page
+On your Contact page (contact.html), create a form like this (you can style it to match your site):
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+</head>
+<body>
+  <h1>Contact Us</h1>
+
+  <form
+    action="https://formsubmit.co/el/tucede"
+    method="POST"
+  >
+    <!-- Optional: redirect to a custom thank-you page -->
+    <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html">
+
+    <label>
+      Name<br>
+      <input type="text" name="name" required>
+    </label>
+    <br><br>
+
+    <label>
+      Email<br>
+      <input type="email" name="email" required>
+    </label>
+    <br><br>
+
+    <label>
+      Message<br>
+      <textarea name="message" required></textarea>
+    </label>
+    <br><br>
+
+    <button type="submit">Send Message</button>
+  </form>
 </body>
 </html>
