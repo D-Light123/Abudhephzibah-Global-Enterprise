@@ -77,7 +77,8 @@
             transition: 0.3s;
         }
 
-        nav a:hover {
+        nav a:hover,
+        nav a.active {
             background-color: rgba(255, 215, 0, 0.2);
         }
 
@@ -723,22 +724,19 @@
         <nav>
             <!-- Primary Links (Top) -->
             <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-                <a href="index.html">Home</a>
+                <a href="index.html" class="active">Home</a>
                 <a href="about.html">About</a>
                 <a href="product.html">Products</a>
                 <a href="contact.html">Contact</a>
-<a href="order.html" class="active">Order</a>
+                <a href="order.html">Order</a>
             </div>
-<br>
 
-            <!-- Secondary Links (Bottom, separated by hr) -->
-            
-                <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
-                    <a href="#foods">🍚 Food Items</a>
-                    <a href="#cleaning">🧼 Cleaning</a>
-                    <a href="#others">🥫 Other Provisions</a>
-                </div>
-           
+            <!-- Secondary Links (Bottom) -->
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+                <a href="#foods">🍚 Food Items</a>
+                <a href="#cleaning">🧼 Cleaning</a>
+                <a href="#others">🥫 Other Provisions</a>
+            </div>
         </nav>
     </header>
 
@@ -746,11 +744,11 @@
     <section class="banner-section">
         <div class="banner-content">
             <span class="banner-icon">🛒</span>
-            
+
             <h1 class="banner-title">Abudhephzibah Global Enterprise</h1>
-            
+
             <p class="banner-subtitle">Your One-Stop Provision Shop for Quality Household Items</p>
-            
+
             <div class="banner-products">
                 <span class="product-badge">🍚 Rice & Grains</span>
                 <span class="product-badge">🫘 Beans & Legumes</span>
@@ -758,9 +756,9 @@
                 <span class="product-badge">🥫 Canned Foods</span>
                 <span class="product-badge">🧴 Personal Care</span>
             </div>
-            
+
             <a href="#foods" class="banner-button">Shop Now 🛍️</a>
-            
+
             <div class="product-icons">
                 <div class="product-icon-item">🍚</div>
                 <div class="product-icon-item">🫘</div>
@@ -1057,7 +1055,7 @@
                     Visit our shop today for your rice, beans, detergent, cooking
                     ingredients, snacks, and other household provisions.
                 </p>
-                
+
                 <!-- Google Maps Button -->
                 <a href="https://maps.app.goo.gl/11GwjTEWmXqLGtDn6" 
                    target="_blank"
@@ -1124,7 +1122,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="products.html">Products</a></li>
+                    <li><a href="product.html">Products</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
