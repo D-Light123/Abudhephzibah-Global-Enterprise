@@ -1069,34 +1069,85 @@
             <div class="contact-form">
                 <h2>Send a Message</h2>
 
-                <form action="https://formsubmit.co/iyobosaserehephzibah@gmail.com" method="post">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+         
+<form
+  action="https://formsubmit.co/iyobosaserehephzibah@gmail.com"
+  method="POST"
+>
+  <label for="name">Your Name</label>
+  <input
+    type="text"
+    id="name"
+    name="name"
+    placeholder="Enter your name"
+    required
+  />
 
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-<input
+  <label for="email">Your Email</label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="Enter your email"
+    required
+  />
+
+  <label for="phone">Phone Number</label>
+  <input
+    type="tel"
+    id="phone"
+    name="phone"
+    placeholder="Enter your phone number"
+    required
+  />
+
+  <label for="product">Product You Need</label>
+  <select id="product" name="product" required>
+    <option value="">Select a product category</option>
+    <option value="Rice and Grains">Rice and Grains</option>
+    <option value="Beans and Legumes">Beans and Legumes</option>
+    <option value="Detergents and Cleaning Products">
+      Detergents and Cleaning Products
+    </option>
+    <option value="Cooking Ingredients">Cooking Ingredients</option>
+    <option value="Snacks and Beverages">Snacks and Beverages</option>
+    <option value="Personal Care Products">Personal Care Products</option>
+  </select>
+
+  <label for="message">Your Message</label>
+  <textarea
+    id="message"
+    name="message"
+    placeholder="Write your message here"
+    required
+  ></textarea>
+
+  <!-- Redirect to thanks page -->
+  <input
     type="hidden"
-    name="_redirect"
+    name="_next"
     value="https://d-light123.github.io/Abudhephzibah-Global-Enterprise/thanks.html"
   />
 
-                    <label for="product">Product You Need</label>
-                    <select id="product" name="product" required>
-                        <option value="">Select a product category</option>
-                        <option value="Rice and Grains">Rice and Grains</option>
-                        <option value="Beans and Legumes">Beans and Legumes</option>
-                        <option value="Detergents and Cleaning Products">Detergents and Cleaning Products</option>
-                        <option value="Cooking Ingredients">Cooking Ingredients</option>
-                        <option value="Snacks and Beverages">Snacks and Beverages</option>
-                        <option value="Personal Care Products">Personal Care Products</option>
-                    </select>
+  <!-- Auto-reply to the person who filled the form -->
+  <input
+    type="hidden"
+    name="_autoresponse"
+    value="Thank you for contacting Abudhephzibah Global Enterprise. We have received your message and will reply to you soon."
+  />
 
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+  <!-- Optional: custom subject for emails you receive -->
+  <input
+    type="hidden"
+    name="_subject"
+    value="New message from your website"
+  />
 
-                    <button type="submit">Submit Message</button>
-                </form>
+  <!-- Optional: turn off captcha -->
+  <input type="hidden" name="_captcha" value="false" />
+
+  <button type="submit">Submit Message</button>
+</form>
             </div>
 
         </div>
